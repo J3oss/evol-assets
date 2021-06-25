@@ -1,0 +1,1799 @@
+{
+  "id":"TestScene",
+  "nodes": [
+    {
+      "id": "CameraTransformOverride",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 20.0, 7.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        }
+      ],
+      "children": [
+        {
+          "id": "Camera",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, 0.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "MainCameraController",
+              "script_path": "scripts://TestScene/Camera.lua"
+            }
+          ],
+          "children": [
+            {
+              "id": "RotationHelper",
+              "components": [
+                {
+                  "type": "TransformComponent",
+                  "position": [0.0, 0.0, 0.0],
+                  "rotation": [0.0, 0.0, 0.0],
+                  "scale": [1.0, 1.0, 1.0]
+                },
+                {
+                  "type": "CameraComponent",
+                  "view": "Perspective",
+                  "fov": 90,
+                  "near": 0.001,
+                  "far": 1000,
+                  "aspectRatio": 1.3333
+                },
+                {
+                  "type": "ScriptComponent",
+                  "script_name": "MainCameraRotationHelper",
+                  "script_path": "scripts://TestScene/CameraHelper.lua"
+                }
+              ]
+            }
+          ]
+        },
+      ]
+    }
+    {
+      "id": "SideCamera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [55.0, 0.0, -15.0],
+          "rotation": [0.0, 90.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "CameraComponent",
+          "view": "Perspective",
+          "fov": 90,
+          "near": 0.001,
+          "far": 1000,
+          "aspectRatio": 1.3333
+        }
+      ]
+    },
+    {
+      "id": "Player",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 0.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 0.3,
+          "restitution": 0.0,
+          "collisionShape": {
+            "type": "Box",
+            "halfExtents": [1.0, 1.0, 1.0]
+          }
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "MainPlayerController",
+          "script_path": "scripts://TestScene/Player.lua"
+        },
+      ]
+    },
+    {
+      "id": "Ball1",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        },
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Cube.mesh",
+          "material": "GreenMaterial"
+        }
+      ]
+    },
+    {
+      "id": "Ball2",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        },
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        }
+      ]
+    },
+    {
+      "id": "Ball3",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball4",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball5",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball6",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball7",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball9",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball10",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball11",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball12",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball13",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball14",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball15",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball16",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball17",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball18",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball19",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball21",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball22",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball23",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "GreenMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball24",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball25",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball26",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball27",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball28",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball29",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball30",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball31",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball32",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball33",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball34",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball35",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball36",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball37",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball38",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball39",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball40",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball41",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball42",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball43",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball44",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball45",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball46",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball47",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball48",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball49",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball50",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball51",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball52",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball53",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball54",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball55",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball56",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball57",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball58",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball59",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball60",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Ball61",
+      "components": [
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        },
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 10.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "Map",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 0.0, 0.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        }
+      ],
+      "children": [
+        {
+          "id": "Ground",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, -5.0, -15.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 1.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [100.0, 1.0, 100.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "WallRight",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [99.0, 0.0, -14.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [1.0, 4.0, 99.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "WallLeft",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [-99.0, 0.0, -14.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [1.0, 4.0, 99.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "WallFront",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, 84.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [98.0, 4.0, 1.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "WallBack",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, -114.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [100.0, 4.0, 1.0]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "GreenMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [0.0, 1.0, 0.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "RedMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [1.0, 0.0, 0.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "BlueMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [0.0, 0.0, 1.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "WhiteMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [1.0, 1.0, 1.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+  ],
+  "pipelines": [
+    {
+      "id": "DefaultPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://default.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://default.frag"
+        }
+      ]
+    }
+  ],
+  "activeCamera": "CameraTransformOverride.Camera.RotationHelper",
+}

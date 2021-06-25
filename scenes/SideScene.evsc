@@ -1,0 +1,173 @@
+{
+  "id":"SideScene",
+  "nodes": [
+    {
+      "id": "Camera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 0.0, 0.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "CameraComponent",
+          "view": "Perspective",
+          "fov": 60,
+          "near": 0.001,
+          "far": 1000,
+          "aspectRatio": 1.3333
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "SideCameraController",
+          "script_path": "scripts://SideScene/Camera.lua"
+        }
+      ]
+    },
+    {
+      "id": "Player",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 0.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Capsule",
+            "radius": 1.0,
+            "height": 2.0
+          }
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "SidePlayerController",
+          "script_path": "scripts://SideScene/Player.lua"
+        }
+      ],
+      "children": [
+        {
+          "id": "Child",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 5.0, -5.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Kinematic",
+              "mass": 1.0,
+              "restitution": 1.0,
+              "collisionShape": {
+                "type": "Sphere",
+                "radius": 1.0
+              }
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "SideChildController",
+              "script_path": "scripts://SideScene/Child.lua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Ceiling",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 15.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Ghost",
+          "mass": 0.0,
+          "restitution": 0.0,
+          "collisionShape": {
+            "type": "Box",
+            "halfExtents": [10.0, 10.0, 10.0]
+          }
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "SideGhostController",
+          "script_path": "scripts://SideScene/Ghost.lua"
+        }
+      ]
+    },
+    {
+      "id": "Ground",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, -15.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Static",
+          "mass": 0.0,
+          "restitution": 0.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 10.0
+          }
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "GreenMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [0.0, 1.0, 0.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "RedMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [1.0, 0.0, 0.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "BlueMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [0.0, 0.0, 1.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "WhiteMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [1.0, 1.0, 1.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+  ],
+  "pipelines": [
+    {
+      "id": "DefaultPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://default.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://default.frag"
+        }
+      ]
+    }
+  ],
+  "activeCamera": "Camera"
+}

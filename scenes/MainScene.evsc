@@ -1,0 +1,303 @@
+{
+  "id":"MainScene",
+  "nodes": [
+    {
+      "id": "Camera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, -2.0, -11.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "MainCameraController",
+          "script_path": "scripts://MainScene/Camera.lua"
+        }
+      ],
+      "children": [
+        {
+          "id": "RotationHelper",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, 0.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "CameraComponent",
+              "view": "Perspective",
+              "fov": 90,
+              "near": 0.001,
+              "far": 1000,
+              "aspectRatio": 1.3333
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "MainCameraRotationHelper",
+              "script_path": "scripts://MainScene/CameraHelper.lua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SideCamera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [25.0, 0.0, -15.0],
+          "rotation": [0.0, 90.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "CameraComponent",
+          "view": "Perspective",
+          "fov": 90,
+          "near": 0.001,
+          "far": 1000,
+          "aspectRatio": 1.3333
+        }
+      ]
+    },
+    {
+      "id": "Player",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 0.0, -15.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "RigidbodyComponent",
+          "rigidbodyType": "Dynamic",
+          "mass": 1.0,
+          "restitution": 1.0,
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "MainPlayerController",
+          "script_path": "scripts://MainScene/Player.lua"
+        },
+        {
+          "type": "RenderComponent",
+          "mesh": "project://Avocado.mesh",
+          "material": "WhiteMaterial"
+        }
+      ],
+      "children": [
+        {
+          "id": "Child",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 5.0, -5.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Kinematic",
+              "mass": 1.0,
+              "restitution": 1.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [1.0, 1.0, 1.0]
+              }
+            },
+            {
+              "type": "CameraComponent",
+              "view": "Perspective",
+              "fov": 120,
+              "near": 0.001,
+              "far": 1000,
+              "aspectRatio": 1.3333
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "MainChildController",
+              "script_path": "scripts://MainScene/Child.lua"
+            },
+            {
+              "type": "RenderComponent",
+              "mesh": "project://Cube.mesh",
+              "material": "WhiteMaterial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Map",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, 0.0, 0.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        }
+      ],
+      "children": [
+        {
+          "id": "Ground",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, -5.0, -15.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [10.0, 1.0, 10.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "Ceiling",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 5.0, -15.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [10.0, 1.0, 10.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "WallRight",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [9.0, 0.0, -14.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [1.0, 4.0, 9.0]
+              }
+            },
+            {
+              "type": "RenderComponent",
+              "mesh": "project://Avocado.mesh",
+              "material": "WhiteMaterial"
+            }
+          ]
+        },
+        {
+          "id": "WallLeft",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [-9.0, 0.0, -14.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [1.0, 4.0, 9.0]
+              }
+            }
+          ]
+        },
+        {
+          "id": "WallBack",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, -24.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "RigidbodyComponent",
+              "rigidbodyType": "Static",
+              "mass": 0.0,
+              "restitution": 0.0,
+              "collisionShape": {
+                "type": "Box",
+                "halfExtents": [10.0, 4.0, 1.0]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "GreenMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [0.0, 1.0, 0.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "RedMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [1.0, 0.0, 0.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "BlueMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [0.0, 0.0, 1.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+    {
+      "id": "WhiteMaterial",
+      "pipeline": "DefaultPipeline",
+      "baseColor": [1.0, 1.0, 1.0, 1.0],
+      "albedoTexture": "project://lost.tx",
+    },
+  ],
+  "pipelines": [
+    {
+      "id": "DefaultPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://default.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://default.frag"
+        }
+      ]
+    }
+  ],
+  "activeCamera": "Camera.RotationHelper"
+}

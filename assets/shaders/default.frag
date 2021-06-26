@@ -5,6 +5,8 @@ struct Material {
   vec4 baseColor;
   uint albedoTexture;
 
+  uint normalTexture;
+
   float metallicFactor;
   float roughnessFactor;
   uint metallicRoughnessTexture;

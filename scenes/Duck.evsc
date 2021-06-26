@@ -3,16 +3,11 @@
   "id": "",
   "materials": [
     {
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
       "id": "blinn3-fx",
       "metallicFactor": 0,
       "pipeline": "DefaultPipeline",
-      "albedoTexture": "assets://textures/lost.tx"
+      "albedoTexture": "assets://textures/DuckCM.tx"
     }
   ],
   "nodes": [
@@ -21,21 +16,9 @@
         {
           "components": [
             {
-              "position": [
-                0,
-                0,
-                0
-              ],
-              "rotation": [
-                0,
-                -0,
-                0
-              ],
-              "scale": [
-                1,
-                1,
-                1
-              ],
+              "position": [ 0, 0, 0 ],
+              "rotation": [ 0, -0, 0 ],
+              "scale": [ 1, 1, 1 ],
               "type": "TransformComponent"
             },
             {
@@ -49,21 +32,9 @@
         {
           "components": [
             {
-              "position": [
-                400.1130065917969,
-                463.2640075683594,
-                -431.0780334472656
-              ],
-              "rotation": [
-                141.59999847622765,
-                43.19999710403602,
-                180.00000500895632
-              ],
-              "scale": [
-                1,
-                0.9999999403953552,
-                1
-              ],
+              "position": [ 400.1130065917969, 463.2640075683594, -431.0780334472656 ],
+              "rotation": [ 141.59999847622765, 43.19999710403602, 180.00000500895632 ],
+              "scale": [ 1, 0.9999999403953552, 1 ],
               "type": "TransformComponent"
             }
           ],
@@ -72,21 +43,9 @@
       ],
       "components": [
         {
-          "position": [
-            0,
-            0,
-            0
-          ],
-          "rotation": [
-            0,
-            -0,
-            0
-          ],
-          "scale": [
-            0.009999999776482582,
-            0.009999999776482582,
-            0.009999999776482582
-          ],
+          "position": [ 0, 0, 0 ],
+          "rotation": [ 0, -0, 0 ],
+          "scale": [ 0.009999999776482582, 0.009999999776482582, 0.009999999776482582 ],
           "type": "TransformComponent"
         }
       ],

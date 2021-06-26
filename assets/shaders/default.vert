@@ -68,7 +68,7 @@ void main()
   uint index = IndexBuffers[ PushConstants.indexBufferIndex ].indices[gl_VertexIndex];
   Vertex vertex = VertexBuffers[ PushConstants.vertexBufferIndex ].vertices[ index ];
 
-  color = texture(texSampler[0],vertex.uv[0]).xyz;
+  color = texture(texSampler[material.index],vertex.uv[0]).xyz;
 
   normal = vertex.normal.xyz;
   gl_Position = Camera.projection * Camera.view * PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0);

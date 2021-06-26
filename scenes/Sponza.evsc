@@ -11,6 +11,7 @@
       ],
       "id": "_Material_Dummy_0",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/8773302468495022225.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -23,6 +24,7 @@
       ],
       "id": "_Material_Dummy_1",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/12501374198249454378.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -35,6 +37,7 @@
       ],
       "id": "_Material_Dummy_2",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/4477655471536070370.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -47,6 +50,7 @@
       ],
       "id": "_Material_Dummy_3",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/13982482287905699490.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -59,6 +63,7 @@
       ],
       "id": "_Material_Dummy_4",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/16299174074766089871.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -71,6 +76,7 @@
       ],
       "id": "_Material_Dummy_5",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/2051777328469649772.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -83,6 +89,7 @@
       ],
       "id": "_Material_Dummy_6",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/10388182081421875623.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -95,6 +102,7 @@
       ],
       "id": "_Material_Dummy_7",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/15722799267630235092.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -107,6 +115,7 @@
       ],
       "id": "_Material_Dummy_8",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/14267839433702832875.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -119,6 +128,7 @@
       ],
       "id": "_Material_Dummy_9",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/6667038893015345571.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -131,6 +141,7 @@
       ],
       "id": "_Material_Dummy_10",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/3628158980083700836.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -143,6 +154,7 @@
       ],
       "id": "_Material_Dummy_11",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/7645212358685992005.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -167,6 +179,7 @@
       ],
       "id": "_Material_Dummy_13",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/2299742237651021498.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -179,6 +192,7 @@
       ],
       "id": "_Material_Dummy_14",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/7056944414013900257.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -191,6 +205,7 @@
       ],
       "id": "_Material_Dummy_15",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/2374361008830720677.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -203,6 +218,7 @@
       ],
       "id": "_Material_Dummy_16",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/332936164838540657.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -215,6 +231,7 @@
       ],
       "id": "_Material_Dummy_17",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/6593109234861095314.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -227,6 +244,7 @@
       ],
       "id": "_Material_Dummy_18",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/4601176305987539675.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -239,6 +257,7 @@
       ],
       "id": "_Material_Dummy_19",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/4910669866631290573.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -251,6 +270,7 @@
       ],
       "id": "_Material_Dummy_20",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/14170708867020035030.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -263,6 +283,7 @@
       ],
       "id": "_Material_Dummy_21",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/3827035219084910048.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -275,6 +296,7 @@
       ],
       "id": "_Material_Dummy_22",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/10381718147657362067.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -287,6 +309,7 @@
       ],
       "id": "_Material_Dummy_23",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/759203620573749278.tx",
       "pipeline": "DefaultPipeline"
     },
     {
@@ -299,6 +322,7 @@
       ],
       "id": "_Material_Dummy_24",
       "metallicFactor": 1,
+      "normalTexture": "assets://textures/14118779221266351425.tx",
       "pipeline": "DefaultPipeline"
     },
     {

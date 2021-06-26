@@ -1,5 +1,5 @@
 this.on_init = function()
-  this.speed = 0.001
+  this.speed = 0.01
   this.angles = Vec3:new()
   this.mouse_sens = 0.01
 end

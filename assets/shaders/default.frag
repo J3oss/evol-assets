@@ -2,8 +2,12 @@
 #extension GL_EXT_nonuniform_qualifier : require
 
 struct Material {
-  vec3 baseColor;
-  uint index;
+  vec4 baseColor;
+  uint albedoTexture;
+
+  float metallicFactor;
+  float roughnessFactor;
+  uint metallicRoughnessTexture;
 };
 
 struct Light {

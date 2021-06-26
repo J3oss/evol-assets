@@ -2,8 +2,12 @@
 #extension GL_EXT_nonuniform_qualifier : require
 
 struct Material {
-  vec3 baseColor;
-  uint index;
+  vec4 baseColor;
+  uint albedoTexture;
+
+  float metallicFactor;
+  float roughnessFactor;
+  uint metallicRoughnessTexture;
 };
 
 struct Vertex {
@@ -68,7 +72,7 @@ void main()
   uint index = IndexBuffers[ PushConstants.indexBufferIndex ].indices[gl_VertexIndex];
   Vertex vertex = VertexBuffers[ PushConstants.vertexBufferIndex ].vertices[ index ];
 
-  color = texture(texSampler[material.index],vertex.uv[0]).xyz;
+  color = texture(texSampler[material.albedoTexture],vertex.uv[0]).xyz;
 
   normal = vertex.normal.xyz;
   gl_Position = Camera.projection * Camera.view * PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0);

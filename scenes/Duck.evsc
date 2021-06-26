@@ -1,0 +1,138 @@
+{
+  "activeCamera": "Camera.RotationHelper",
+  "id": "",
+  "materials": [
+    {
+      "baseColor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "blinn3-fx",
+      "metallicFactor": 0,
+      "pipeline": "DefaultPipeline",
+      "albedoTexture": "assets://textures/lost.tx"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        {
+          "components": [
+            {
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                -0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ],
+              "type": "TransformComponent"
+            },
+            {
+              "material": "blinn3-fx",
+              "mesh": "assets://meshes/Duck_LOD3spShape.mesh",
+              "type": "RenderComponent"
+            }
+          ],
+          "id": "nodes[2]"
+        },
+        {
+          "components": [
+            {
+              "position": [
+                400.1130065917969,
+                463.2640075683594,
+                -431.0780334472656
+              ],
+              "rotation": [
+                141.59999847622765,
+                43.19999710403602,
+                180.00000500895632
+              ],
+              "scale": [
+                1,
+                0.9999999403953552,
+                1
+              ],
+              "type": "TransformComponent"
+            }
+          ],
+          "id": "nodes[1]"
+        }
+      ],
+      "components": [
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            -0,
+            0
+          ],
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ],
+          "type": "TransformComponent"
+        }
+      ],
+      "id": "nodes[0]"
+    },
+    {
+      "id": "Camera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, -2.0, -11.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "MainCameraController",
+          "script_path": "scripts://MainScene/Camera.lua"
+        }
+      ],
+      "children": [
+        {
+          "id": "RotationHelper",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, 0.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "CameraComponent",
+              "view": "Perspective",
+              "fov": 90,
+              "near": 0.001,
+              "far": 1000,
+              "aspectRatio": 1.3333
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "MainCameraRotationHelper",
+              "script_path": "scripts://MainScene/CameraHelper.lua"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,20 +3,24 @@
   "engineVersion": "0.2",
   "mounts": [
     {
-      "path": "./res",
-      "mountpoint": "res"
-    },
-    {
-      "path": "./res/scripts",
+      "path": "./scripts",
       "mountpoint": "scripts"
     },
     {
-      "path": "./res/scenes",
+      "path": "./scenes",
       "mountpoint": "scenes"
     },
     {
-      "path": "./res/shaders",
+      "path": "./assets",
+      "mountpoint": "assets"
+    },
+    {
+      "path": "./assets/shaders",
       "mountpoint": "shaders"
+    },
+    {
+      "path": "./prefabs",
+      "mountpoint": "prefabs"
     }
   ],
   "scenes": [
@@ -29,9 +33,33 @@
       "path": "scenes://SideScene.evsc"
     },
     {
+      "id": "BoxScene",
+      "path": "scenes://Box.evsc"
+    },
+    {
       "id": "TestScene",
       "path": "scenes://TestScene.evsc"
     },
+    {
+      "id": "TruckScene",
+      "path": "scenes://Truck.evsc"
+    },
+    {
+      "id": "BuggyScene",
+      "path": "scenes://Buggy.evsc"
+    },
+    {
+      "id": "BrainStemScene",
+      "path": "scenes://BrainStem.evsc"
+    },
+    {
+      "id": "SponzaScene",
+      "path": "scenes://Sponza.evsc"
+    },
+    {
+      "id": "DuckScene",
+      "path": "scenes://Duck.evsc"
+    }
   ],
-  "activeScene": "TestScene"
+  "activeScene": "DuckScene"
 }

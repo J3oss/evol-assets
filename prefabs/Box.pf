@@ -1,0 +1,39 @@
+{
+  "children": [
+    {
+      "components": [
+        {
+          "position": [ 0, 0, 0 ],
+          "rotation": [ 0, -0, 0 ],
+          "scale": [ 1, 1, 1 ],
+          "type": "TransformComponent"
+        },
+        {
+          "material": "RedMaterial",
+          "mesh": "assets://meshes/CesiumMilkTruck_Wheels.mesh",
+          "type": "RenderComponent"
+        }
+      ],
+      "id": "nodes[1]"
+    }
+  ],
+  "components": [
+    {
+      "position": [ 0, 0, 0 ],
+      "rotation": [ -90.00000250447816, -0, 0 ],
+      "scale": [ 1, 1, 1 ],
+      "type": "TransformComponent"
+    },
+    {
+      "type": "RigidbodyComponent",
+      "rigidbodyType": "Static",
+      "mass": 1.0,
+      "restitution": 1.0,
+      "collisionShape": {
+        "type": "Mesh",
+        "meshPath": "assets://meshes/CesiumMilkTruck_Wheels.mesh"
+      }
+    }
+  ],
+  "id": "nodes[0]"
+}

@@ -88,7 +88,7 @@
         },
         {
           "type": "RenderComponent",
-          "mesh": "project://Avocado.mesh",
+          "mesh": "assets://meshes/Avocado.mesh",
           "material": "WhiteMaterial"
         }
       ],
@@ -127,7 +127,7 @@
             },
             {
               "type": "RenderComponent",
-              "mesh": "project://Cube.mesh",
+              "mesh": "assets://meshes/Cube.mesh",
               "material": "WhiteMaterial"
             }
           ]
@@ -202,13 +202,13 @@
               "mass": 0.0,
               "restitution": 0.0,
               "collisionShape": {
-                "type": "Box",
-                "halfExtents": [1.0, 4.0, 9.0]
+                "type": "Mesh",
+                "meshPath": "assets://meshes/Avocado.mesh"
               }
             },
             {
               "type": "RenderComponent",
-              "mesh": "project://Avocado.mesh",
+              "mesh": "assets://meshes/Avocado.mesh",
               "material": "WhiteMaterial"
             }
           ]
@@ -263,26 +263,26 @@
       "id": "GreenMaterial",
       "pipeline": "DefaultPipeline",
       "baseColor": [0.0, 1.0, 0.0, 1.0],
-      "albedoTexture": "project://lost.tx",
+      "albedoTexture": "assets://textures/lost.tx"
     },
     {
       "id": "RedMaterial",
       "pipeline": "DefaultPipeline",
       "baseColor": [1.0, 0.0, 0.0, 1.0],
-      "albedoTexture": "project://lost.tx",
+      "albedoTexture": "assets://textures/lost.tx"
     },
     {
       "id": "BlueMaterial",
       "pipeline": "DefaultPipeline",
       "baseColor": [0.0, 0.0, 1.0, 1.0],
-      "albedoTexture": "project://lost.tx",
+      "albedoTexture": "assets://textures/lost.tx"
     },
     {
       "id": "WhiteMaterial",
       "pipeline": "DefaultPipeline",
       "baseColor": [1.0, 1.0, 1.0, 1.0],
-      "albedoTexture": "project://lost.tx",
-    },
+      "albedoTexture": "assets://textures/lost.tx"
+    }
   ],
   "pipelines": [
     {

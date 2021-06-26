@@ -36,5 +36,6 @@ layout(location = 0) out vec4 outColor;
 void main() {
   float intensity = ((dot(normalize(normal), normalize(directional_light)) +1)/2.0)+0.05;
 
+  // outColor = vec4(color * intensity, 1.0);
   outColor = vec4(color * intensity, 1.0);
 }

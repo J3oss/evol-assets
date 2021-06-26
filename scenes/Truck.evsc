@@ -1,0 +1,199 @@
+{
+  "id": "Scene",
+  "materials": [
+    {
+      "baseColor": [ 1, 1, 1, 1 ],
+      "id": "wheels",
+      "metallicFactor": 0,
+      "pipeline": "DefaultPipeline",
+      "albedoTexture": "assets://textures/lost.tx"
+    },
+    {
+      "baseColor": [ 1, 1, 1, 1 ],
+      "id": "truck",
+      "metallicFactor": 0,
+      "pipeline": "DefaultPipeline",
+      "albedoTexture": "assets://textures/lost.tx"
+    },
+    {
+      "baseColor": [ 0, 0.04050629958510399, 0.021240700036287308, 1 ],
+      "id": "glass",
+      "metallicFactor": 0,
+      "pipeline": "DefaultPipeline",
+      "albedoTexture": "assets://textures/lost.tx"
+    },
+    {
+      "baseColor": [ 0.06400000303983688, 0.06400000303983688, 0.06400000303983688, 1 ],
+      "id": "window_trim",
+      "metallicFactor": 0,
+      "pipeline": "DefaultPipeline",
+      "albedoTexture": "assets://textures/lost.tx"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "components": [
+                {
+                  "position": [ 0, 0, 0 ],
+                  "rotation": [ 0, 0, 0 ],
+                  "scale": [ 1, 1, 1 ],
+                  "type": "TransformComponent"
+                },
+                {
+                  "material": "glass",
+                  "mesh": "assets://meshes/CesiumMilkTruck_Cesium_Milk_Truck-1.mesh",
+                  "type": "RenderComponent"
+                }
+              ],
+              "id": "Cesium_Milk_Truck_Primitive_1"
+            },
+            {
+              "components": [
+                {
+                  "position": [ 0, 0, 0 ],
+                  "rotation": [ 0, 0, 0 ],
+                  "scale": [ 1, 1, 1 ],
+                  "type": "TransformComponent"
+                },
+                {
+                  "material": "window_trim",
+                  "mesh": "assets://meshes/CesiumMilkTruck_Cesium_Milk_Truck-2.mesh",
+                  "type": "RenderComponent"
+                }
+              ],
+              "id": "Cesium_Milk_Truck_Primitive_2"
+            },
+            {
+              "children": [
+                {
+                  "components": [
+                    {
+                      "position": [ 0, 0, 0 ],
+                      "rotation": [ 0, -10.153014729521423, 0 ],
+                      "scale": [ 1, 1, 1 ],
+                      "type": "TransformComponent"
+                    },
+                    {
+                      "material": "wheels",
+                      "mesh": "assets://meshes/CesiumMilkTruck_Wheels.mesh",
+                      "type": "RenderComponent"
+                    }
+                  ],
+                  "id": "Wheels"
+                }
+              ],
+              "components": [
+                {
+                  "position": [ 1.432669997215271, 0, -0.4277220070362091 ],
+                  "rotation": [ 0, -0, 0 ],
+                  "scale": [ 1, 1, 1 ],
+                  "type": "TransformComponent"
+                }
+              ],
+              "id": "Node"
+            },
+            {
+              "children": [
+                {
+                  "components": [
+                    {
+                      "position": [ 0, 0, 0 ],
+                      "rotation": [ 0, -10.153014729521423, 0 ],
+                      "scale": [ 1, 1, 1 ],
+                      "type": "TransformComponent"
+                    },
+                    {
+                      "material": "wheels",
+                      "mesh": "assets://meshes/CesiumMilkTruck_Wheels.mesh",
+                      "type": "RenderComponent"
+                    }
+                  ],
+                  "id": "Wheels.001"
+                }
+              ],
+              "components": [
+                {
+                  "position": [ -1.352329969406128, 0, -0.4277220070362091 ],
+                  "rotation": [ 0, -0, 0 ],
+                  "scale": [ 1, 1, 1 ],
+                  "type": "TransformComponent"
+                }
+              ],
+              "id": "Node.001"
+            }
+          ],
+          "components": [
+            {
+              "position": [ 0, 0, 0 ],
+              "rotation": [ 0, -0, 0 ],
+              "scale": [ 1, 1, 1 ],
+              "type": "TransformComponent"
+            },
+            {
+              "material": "truck",
+              "mesh": "assets://meshes/CesiumMilkTruck_Cesium_Milk_Truck-0.mesh",
+              "type": "RenderComponent"
+            }
+          ],
+          "id": "Cesium_Milk_Truck"
+        }
+      ],
+      "components": [
+        {
+          "position": [ 0, 0, 0 ],
+          "rotation": [ 0, -90.00000250447816, 89.999995674289 ],
+          "scale": [ 0.9999999403953552, 0.9999999403953552, 0.9999999403953552 ],
+          "type": "TransformComponent"
+        }
+      ],
+      "id": "Yup2Zup"
+    },
+    {
+      "id": "Camera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, -2.0, 11.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "MainCameraController",
+          "script_path": "scripts://MainScene/Camera.lua"
+        }
+      ],
+      "children": [
+        {
+          "id": "RotationHelper",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, 0.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "CameraComponent",
+              "view": "Perspective",
+              "fov": 90,
+              "near": 0.001,
+              "far": 1000,
+              "aspectRatio": 1.3333
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "MainCameraRotationHelper",
+              "script_path": "scripts://MainScene/CameraHelper.lua"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "activeCamera": "Camera.RotationHelper"
+}

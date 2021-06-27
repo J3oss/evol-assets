@@ -72,9 +72,9 @@ void main()
 
   mat3 model = transpose(inverse(mat3(PushConstants.render_matrix)));
 
-  vec3 T = normalize(vec3(vertex.tangent));
-  vec3 N = normalize(vec3(vertex.normal));
-  vec3 B = normalize(vec3(vertex.bitangent));
+  vec3 T = normalize(model * vec3(vertex.tangent));
+  vec3 N = normalize(model * vec3(vertex.normal));
+  vec3 B = normalize(model * vec3(vertex.bitangent));
   /* T = normalize(T - dot(T, N) * N); // Re-orthoganize T with respect to N */
   /* vec3 B = normalize(cross(N, T)); */
   TBN = mat3(T, B, N);

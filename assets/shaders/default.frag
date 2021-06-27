@@ -52,16 +52,15 @@ layout(location = 0) out vec4 outColor;
 
 void main() {
   Material material  = MaterialBuffers.materials[ PushConstants.materialBufferIndex ];
-  mat3 normalMatrix = transpose(inverse(mat3(PushConstants.render_matrix)));
 
   vec3 out_normal;
-  // if(material.normalTexture == 0) {
-  // out_normal = normalize(normalMatrix * TBN[2].xyz);
-  // } else {
+  if(material.normalTexture == 0) {
+    out_normal = TBN[2].xyz;
+  } else {
     vec3 sampled_normal = texture(texSampler[material.normalTexture], uv).rgb;
     sampled_normal = 2.0 * sampled_normal - vec3(1.0);
-    out_normal = normalize(normalMatrix * TBN * sampled_normal);
-  // }
+    out_normal = normalize(TBN * sampled_normal);
+  }
 
 
   float intensity = dot(out_normal, normalize(directional_light)) + 0.2;
@@ -73,8 +72,8 @@ void main() {
     inColor = texture(texSampler[material.albedoTexture], uv).xyz;
   }
 
-  // outColor = vec4(inColor * intensity, 1.0);
+  outColor = vec4(inColor * intensity, 1.0);
   // outColor = vec4(inColor, 1.0);
   // outColor = vec4(vec3(intensity), 1.0);
-  outColor = vec4(out_normal, 1.0);
+  // outColor = vec4(out_normal, 1.0);
 }

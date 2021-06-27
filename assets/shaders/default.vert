@@ -15,8 +15,9 @@ struct Material {
 struct Vertex {
   vec4 position;
   vec4 normal;
-  vec4 color;
   vec2 uv[2];
+  vec4 tangent;
+  vec4 bitangent; // No longer needed. // TODO remove
 };
 
 struct Light {
@@ -57,31 +58,26 @@ layout(set = 2, binding = 2) buffer IndexBuffer {
   uint indices[];
 } IndexBuffers[];
 
-layout(set = 2, binding = 3) buffer MaterialBuffer {
-  layout(align = 16) Material materials[];
-} MaterialBuffers;
-
 layout(set = 2, binding = 4) uniform sampler2D texSampler[];
 
-layout(location = 0) out vec3 normal;
-layout(location = 1) out vec3 color;
-layout(location = 2) out Material material;
+layout(location = 0) out vec2 uv;
+layout(location = 1) smooth out mat3 TBN;
 
 void main()
 {
-  material  = MaterialBuffers.materials[ PushConstants.materialBufferIndex ];
-
   uint index = IndexBuffers[ PushConstants.indexBufferIndex ].indices[gl_VertexIndex];
   Vertex vertex = VertexBuffers[ PushConstants.vertexBufferIndex ].vertices[ index ];
 
-  color = texture(texSampler[material.albedoTexture], vertex.uv[0]).xyz;
+  uv = vertex.uv[0];
 
-  if(material.normalTexture != 0) {
-    normal = texture(texSampler[material.normalTexture], vertex.uv[0]).xyz;
-  }
-  else {
-    normal = vertex.normal.xyz;
-  }
+  mat3 model = transpose(inverse(mat3(PushConstants.render_matrix)));
+
+  vec3 T = normalize(vec3(vertex.tangent));
+  vec3 N = normalize(vec3(vertex.normal));
+  vec3 B = normalize(vec3(vertex.bitangent));
+  /* T = normalize(T - dot(T, N) * N); // Re-orthoganize T with respect to N */
+  /* vec3 B = normalize(cross(N, T)); */
+  TBN = mat3(T, B, N);
 
   gl_Position = Camera.projection * Camera.view * PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0);
 }

@@ -59,7 +59,15 @@
     {
       "id": "DuckScene",
       "path": "scenes://Duck.evsc"
+    },
+    {
+      "id": "SofaScene",
+      "path": "scenes://Sofa.evsc"
+    },
+    {
+      "id": "DamagedHelmetScene",
+      "path": "scenes://DamagedHelmet.evsc"
     }
   ],
-  "activeScene": "SponzaScene"
+  "activeScene": "DamagedHelmetScene"
 }

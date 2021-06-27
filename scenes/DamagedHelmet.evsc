@@ -1,0 +1,102 @@
+{
+  "id": "Scene",
+  "materials": [
+    {
+      "albedoTexture": "assets://textures/Default_albedo.tx",
+      "baseColor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "Material_MR",
+      "metallicFactor": 1,
+      "normalTexture": "assets://textures/Default_normal.tx",
+      "pipeline": "DefaultPipeline"
+    },
+    {
+      "baseColor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "Scene_Material_Dummy_1",
+      "metallicFactor": 1,
+      "pipeline": "DefaultPipeline"
+    }
+  ],
+  "nodes": [
+    {
+      "components": [
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            90.00000250447816,
+            -0,
+            0
+          ],
+          "scale": [
+            1,
+            1.0000001192092896,
+            1.0000001192092896
+          ],
+          "type": "TransformComponent"
+        },
+        {
+          "material": "Material_MR",
+          "mesh": "assets://meshes/DamagedHelmet_mesh_helmet_LP_13930damagedHelmet.mesh",
+          "type": "RenderComponent"
+        }
+      ],
+      "id": "node_damagedHelmet_-6514"
+    },
+    {
+      "id": "Camera",
+      "components": [
+        {
+          "type": "TransformComponent",
+          "position": [0.0, -2.0, 11.0],
+          "rotation": [0.0, 0.0, 0.0],
+          "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "type": "ScriptComponent",
+          "script_name": "MainCameraController",
+          "script_path": "scripts://MainScene/Camera.lua"
+        }
+      ],
+      "children": [
+        {
+          "id": "RotationHelper",
+          "components": [
+            {
+              "type": "TransformComponent",
+              "position": [0.0, 0.0, 0.0],
+              "rotation": [0.0, 0.0, 0.0],
+              "scale": [1.0, 1.0, 1.0]
+            },
+            {
+              "type": "CameraComponent",
+              "view": "Perspective",
+              "fov": 90,
+              "near": 0.001,
+              "far": 1000,
+              "aspectRatio": 1.3333
+            },
+            {
+              "type": "ScriptComponent",
+              "script_name": "MainCameraRotationHelper",
+              "script_path": "scripts://MainScene/CameraHelper.lua"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "activeCamera": "Camera.RotationHelper"
+}

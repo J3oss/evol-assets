@@ -85,11 +85,6 @@
           "type": "ScriptComponent",
           "script_name": "MainPlayerController",
           "script_path": "scripts://MainScene/Player.lua"
-        },
-        {
-          "type": "RenderComponent",
-          "mesh": "assets://meshes/Avocado.mesh",
-          "material": "WhiteMaterial"
         }
       ],
       "children": [
@@ -124,11 +119,6 @@
               "type": "ScriptComponent",
               "script_name": "MainChildController",
               "script_path": "scripts://MainScene/Child.lua"
-            },
-            {
-              "type": "RenderComponent",
-              "mesh": "assets://meshes/Cube.mesh",
-              "material": "WhiteMaterial"
             }
           ]
         }
@@ -195,21 +185,6 @@
               "position": [9.0, 0.0, -14.0],
               "rotation": [0.0, 0.0, 0.0],
               "scale": [1.0, 1.0, 1.0]
-            },
-            {
-              "type": "RigidbodyComponent",
-              "rigidbodyType": "Static",
-              "mass": 0.0,
-              "restitution": 0.0,
-              "collisionShape": {
-                "type": "Mesh",
-                "meshPath": "assets://meshes/Avocado.mesh"
-              }
-            },
-            {
-              "type": "RenderComponent",
-              "mesh": "assets://meshes/Avocado.mesh",
-              "material": "WhiteMaterial"
             }
           ]
         },

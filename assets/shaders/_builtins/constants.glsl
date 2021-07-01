@@ -1,0 +1,6 @@
+#ifndef EV_GLSL_CONSTANTS_H
+#define EV_GLSL_CONSTANTS_H
+
+#define PI 3.1415926538
+
+#endif

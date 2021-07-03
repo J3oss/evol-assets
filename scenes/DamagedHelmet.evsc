@@ -9,10 +9,18 @@
         1,
         1
       ],
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ],
+      "emissiveTexture": "assets://textures/Default_emissive.tx",
       "id": "Material_MR",
       "metallicFactor": 1,
+      "metallicRoughnessTexture": "assets://textures/Default_AO-Default_metalRoughness.tx",
       "normalTexture": "assets://textures/Default_normal.tx",
-      "pipeline": "DefaultPipeline"
+      "pipeline": "DefaultPipeline",
+      "roughnessFactor": 1
     },
     {
       "baseColor": [
@@ -21,9 +29,15 @@
         1,
         1
       ],
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ],
       "id": "Scene_Material_Dummy_1",
       "metallicFactor": 1,
-      "pipeline": "DefaultPipeline"
+      "pipeline": "DefaultPipeline",
+      "roughnessFactor": 1
     }
   ],
   "nodes": [
@@ -36,14 +50,14 @@
             0
           ],
           "rotation": [
-            90.00000250447816,
+            -179.999991348578,
             -0,
             0
           ],
           "scale": [
             1,
-            1.0000001192092896,
-            1.0000001192092896
+            1,
+            1
           ],
           "type": "TransformComponent"
         },

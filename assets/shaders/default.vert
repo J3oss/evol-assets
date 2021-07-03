@@ -1,24 +1,7 @@
 #version 450
 #extension GL_EXT_nonuniform_qualifier : require
 
-struct Material {
-  vec4 baseColor;
-  uint albedoTexture;
-
-  uint normalTexture;
-
-  float metallicFactor;
-  float roughnessFactor;
-  uint metallicRoughnessTexture;
-};
-
-struct Vertex {
-  vec4 position;
-  vec4 normal;
-  vec2 uv[2];
-  vec4 tangent;
-  vec4 bitangent; // No longer needed. // TODO remove
-};
+#include <shaders://_builtins/types.glsl>
 
 struct Light {
   vec3 color;
@@ -60,8 +43,13 @@ layout(set = 2, binding = 2) buffer IndexBuffer {
 
 layout(set = 2, binding = 4) uniform sampler2D texSampler[];
 
-layout(location = 0) out vec2 uv;
-layout(location = 1) smooth out mat3 TBN;
+layout(location = 0) out vec3 position;
+layout(location = 1) out vec2 uv;
+layout(location = 2) out vec3 cameraPos;
+layout(location = 3) out vec3 lightPos;
+layout(location = 4) smooth out mat3 TBN;
+
+vec4 pointLightPos = vec4(0.0, 2.0, 0.0, 1.0);
 
 void main()
 {
@@ -79,5 +67,11 @@ void main()
   /* vec3 B = normalize(cross(N, T)); */
   TBN = mat3(T, B, N);
 
-  gl_Position = Camera.projection * Camera.view * PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0);
+  mat4 VP = Camera.projection * Camera.view;
+  mat4 MVP =  VP * PushConstants.render_matrix;
+  gl_Position = MVP * vec4(vertex.position.xyz, 1.0);
+  position = (PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0)).xyz;
+  cameraPos = inverse(Camera.view)[3].xyz;
+  /* lightPos = (pointLightPos).xyz; */
+  lightPos = cameraPos;
 }

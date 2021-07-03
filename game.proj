@@ -29,45 +29,21 @@
       "path": "scenes://MainScene.evsc"
     },
     {
-      "id": "SideScene",
-      "path": "scenes://SideScene.evsc"
-    },
-    {
-      "id": "BoxScene",
-      "path": "scenes://Box.evsc"
-    },
-    {
-      "id": "TestScene",
-      "path": "scenes://TestScene.evsc"
-    },
-    {
-      "id": "TruckScene",
-      "path": "scenes://Truck.evsc"
-    },
-    {
-      "id": "BuggyScene",
-      "path": "scenes://Buggy.evsc"
-    },
-    {
-      "id": "BrainStemScene",
-      "path": "scenes://BrainStem.evsc"
-    },
-    {
       "id": "SponzaScene",
       "path": "scenes://Sponza.evsc"
     },
     {
-      "id": "DuckScene",
-      "path": "scenes://Duck.evsc"
-    },
-    {
-      "id": "SofaScene",
-      "path": "scenes://Sofa.evsc"
-    },
-    {
       "id": "DamagedHelmetScene",
       "path": "scenes://DamagedHelmet.evsc"
+    },
+    {
+      "id": "BoomBox",
+      "path": "scenes://BoomBox.evsc"
+    },
+    {
+      "id": "CesiumMilkTruck",
+      "path": "scenes://CesiumMilkTruck.evsc"
     }
   ],
-  "activeScene": "DamagedHelmetScene"
+  "activeScene": "CesiumMilkTruck"
 }

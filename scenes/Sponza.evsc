@@ -9,7 +9,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_0",
+      "id": "Sponza_Material_Dummy_0",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/11872827283454512094.tx",
       "normalTexture": "assets://textures/8773302468495022225.tx",
@@ -24,7 +24,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_1",
+      "id": "Sponza_Material_Dummy_1",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/715093869573992647.tx",
       "normalTexture": "assets://textures/12501374198249454378.tx",
@@ -39,7 +39,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_2",
+      "id": "Sponza_Material_Dummy_2",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8503262930880235456.tx",
       "normalTexture": "assets://textures/4477655471536070370.tx",
@@ -54,7 +54,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_3",
+      "id": "Sponza_Material_Dummy_3",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/16885566240357350108.tx",
       "normalTexture": "assets://textures/13982482287905699490.tx",
@@ -69,7 +69,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_4",
+      "id": "Sponza_Material_Dummy_4",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/11968150294050148237.tx",
       "normalTexture": "assets://textures/16299174074766089871.tx",
@@ -84,7 +84,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_5",
+      "id": "Sponza_Material_Dummy_5",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/4871783166746854860.tx",
       "normalTexture": "assets://textures/2051777328469649772.tx",
@@ -99,7 +99,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_6",
+      "id": "Sponza_Material_Dummy_6",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/9916269861720640319.tx",
       "normalTexture": "assets://textures/10388182081421875623.tx",
@@ -114,7 +114,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_7",
+      "id": "Sponza_Material_Dummy_7",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8051790464816141987.tx",
       "normalTexture": "assets://textures/15722799267630235092.tx",
@@ -129,7 +129,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_8",
+      "id": "Sponza_Material_Dummy_8",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/13824894030729245199.tx",
       "normalTexture": "assets://textures/14267839433702832875.tx",
@@ -144,7 +144,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_9",
+      "id": "Sponza_Material_Dummy_9",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8114461559286000061.tx",
       "normalTexture": "assets://textures/6667038893015345571.tx",
@@ -159,7 +159,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_10",
+      "id": "Sponza_Material_Dummy_10",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/3455394979645218238.tx",
       "normalTexture": "assets://textures/3628158980083700836.tx",
@@ -174,7 +174,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_11",
+      "id": "Sponza_Material_Dummy_11",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8783994986360286082.tx",
       "normalTexture": "assets://textures/7645212358685992005.tx",
@@ -189,7 +189,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_12",
+      "id": "Sponza_Material_Dummy_12",
       "metallicFactor": 0,
       "pipeline": "DefaultPipeline",
       "roughnessFactor": 1
@@ -202,7 +202,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_13",
+      "id": "Sponza_Material_Dummy_13",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/3371964815757888145.tx",
       "normalTexture": "assets://textures/2299742237651021498.tx",
@@ -217,7 +217,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_14",
+      "id": "Sponza_Material_Dummy_14",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/7815564343179553343.tx",
       "normalTexture": "assets://textures/7056944414013900257.tx",
@@ -232,7 +232,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_15",
+      "id": "Sponza_Material_Dummy_15",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/7815564343179553343.tx",
       "normalTexture": "assets://textures/2374361008830720677.tx",
@@ -247,7 +247,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_16",
+      "id": "Sponza_Material_Dummy_16",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/7815564343179553343.tx",
       "normalTexture": "assets://textures/332936164838540657.tx",
@@ -262,7 +262,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_17",
+      "id": "Sponza_Material_Dummy_17",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/466164707995436622.tx",
       "normalTexture": "assets://textures/6593109234861095314.tx",
@@ -277,7 +277,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_18",
+      "id": "Sponza_Material_Dummy_18",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/466164707995436622.tx",
       "normalTexture": "assets://textures/4601176305987539675.tx",
@@ -292,7 +292,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_19",
+      "id": "Sponza_Material_Dummy_19",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/466164707995436622.tx",
       "normalTexture": "assets://textures/4910669866631290573.tx",
@@ -307,7 +307,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_20",
+      "id": "Sponza_Material_Dummy_20",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/1219024358953944284.tx",
       "normalTexture": "assets://textures/14170708867020035030.tx",
@@ -322,7 +322,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_21",
+      "id": "Sponza_Material_Dummy_21",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/2411100444841994089.tx",
       "normalTexture": "assets://textures/3827035219084910048.tx",
@@ -337,7 +337,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_22",
+      "id": "Sponza_Material_Dummy_22",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/17556969131407844942.tx",
       "normalTexture": "assets://textures/10381718147657362067.tx",
@@ -352,7 +352,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_23",
+      "id": "Sponza_Material_Dummy_23",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/13196865903111448057.tx",
       "normalTexture": "assets://textures/759203620573749278.tx",
@@ -367,7 +367,7 @@
         0.5879999995231628,
         1
       ],
-      "id": "_Material_Dummy_24",
+      "id": "Sponza_Material_Dummy_24",
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8747919177698443163.tx",
       "normalTexture": "assets://textures/14118779221266351425.tx",
@@ -381,7 +381,7 @@
         1,
         1
       ],
-      "id": "_Material_Dummy_25",
+      "id": "Sponza_Material_Dummy_25",
       "metallicFactor": 1,
       "pipeline": "DefaultPipeline",
       "roughnessFactor": 1
@@ -393,25 +393,13 @@
         {
           "components": [
             {
-              "position": [
-                0,
-                0,
-                0
-              ],
-              "rotation": [
-                0,
-                0,
-                0
-              ],
-              "scale": [
-                1,
-                1,
-                1
-              ],
+              "position": [ 0, 0, 0 ],
+              "rotation": [ 0, 0, 0 ],
+              "scale": [ 1, 1, 1 ],
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-1.mesh",
               "type": "RenderComponent"
             }
@@ -421,25 +409,13 @@
         {
           "components": [
             {
-              "position": [
-                0,
-                0,
-                0
-              ],
-              "rotation": [
-                0,
-                0,
-                0
-              ],
-              "scale": [
-                1,
-                1,
-                1
-              ],
+              "position": [ 0, 0, 0 ],
+              "rotation": [ 0, 0, 0 ],
+              "scale": [ 1, 1, 1 ],
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-2.mesh",
               "type": "RenderComponent"
             }
@@ -449,25 +425,13 @@
         {
           "components": [
             {
-              "position": [
-                0,
-                0,
-                0
-              ],
-              "rotation": [
-                0,
-                0,
-                0
-              ],
-              "scale": [
-                1,
-                1,
-                1
-              ],
+              "position": [ 0, 0, 0 ],
+              "rotation": [ 0, 0, 0 ],
+              "scale": [ 1, 1, 1 ],
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_3",
+              "material": "Sponza_Material_Dummy_3",
               "mesh": "assets://meshes/Sponza_meshes[0]-3.mesh",
               "type": "RenderComponent"
             }
@@ -495,7 +459,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-4.mesh",
               "type": "RenderComponent"
             }
@@ -523,7 +487,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-5.mesh",
               "type": "RenderComponent"
             }
@@ -551,7 +515,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-6.mesh",
               "type": "RenderComponent"
             }
@@ -579,7 +543,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_7",
+              "material": "Sponza_Material_Dummy_7",
               "mesh": "assets://meshes/Sponza_meshes[0]-7.mesh",
               "type": "RenderComponent"
             }
@@ -607,7 +571,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-8.mesh",
               "type": "RenderComponent"
             }
@@ -635,7 +599,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_8",
+              "material": "Sponza_Material_Dummy_8",
               "mesh": "assets://meshes/Sponza_meshes[0]-9.mesh",
               "type": "RenderComponent"
             }
@@ -663,7 +627,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-10.mesh",
               "type": "RenderComponent"
             }
@@ -691,7 +655,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-11.mesh",
               "type": "RenderComponent"
             }
@@ -719,7 +683,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_9",
+              "material": "Sponza_Material_Dummy_9",
               "mesh": "assets://meshes/Sponza_meshes[0]-12.mesh",
               "type": "RenderComponent"
             }
@@ -747,7 +711,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-13.mesh",
               "type": "RenderComponent"
             }
@@ -775,7 +739,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-14.mesh",
               "type": "RenderComponent"
             }
@@ -803,7 +767,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-15.mesh",
               "type": "RenderComponent"
             }
@@ -831,7 +795,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-16.mesh",
               "type": "RenderComponent"
             }
@@ -859,7 +823,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-17.mesh",
               "type": "RenderComponent"
             }
@@ -887,7 +851,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-18.mesh",
               "type": "RenderComponent"
             }
@@ -915,7 +879,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-19.mesh",
               "type": "RenderComponent"
             }
@@ -943,7 +907,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-20.mesh",
               "type": "RenderComponent"
             }
@@ -971,7 +935,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-21.mesh",
               "type": "RenderComponent"
             }
@@ -999,7 +963,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-22.mesh",
               "type": "RenderComponent"
             }
@@ -1027,7 +991,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-23.mesh",
               "type": "RenderComponent"
             }
@@ -1055,7 +1019,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-24.mesh",
               "type": "RenderComponent"
             }
@@ -1083,7 +1047,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-25.mesh",
               "type": "RenderComponent"
             }
@@ -1111,7 +1075,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-26.mesh",
               "type": "RenderComponent"
             }
@@ -1139,7 +1103,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-27.mesh",
               "type": "RenderComponent"
             }
@@ -1167,7 +1131,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-28.mesh",
               "type": "RenderComponent"
             }
@@ -1195,7 +1159,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-29.mesh",
               "type": "RenderComponent"
             }
@@ -1223,7 +1187,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-30.mesh",
               "type": "RenderComponent"
             }
@@ -1251,7 +1215,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-31.mesh",
               "type": "RenderComponent"
             }
@@ -1279,7 +1243,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-32.mesh",
               "type": "RenderComponent"
             }
@@ -1307,7 +1271,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_6",
+              "material": "Sponza_Material_Dummy_6",
               "mesh": "assets://meshes/Sponza_meshes[0]-33.mesh",
               "type": "RenderComponent"
             }
@@ -1335,7 +1299,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-34.mesh",
               "type": "RenderComponent"
             }
@@ -1363,7 +1327,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-35.mesh",
               "type": "RenderComponent"
             }
@@ -1391,7 +1355,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-36.mesh",
               "type": "RenderComponent"
             }
@@ -1419,7 +1383,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-37.mesh",
               "type": "RenderComponent"
             }
@@ -1447,7 +1411,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_10",
+              "material": "Sponza_Material_Dummy_10",
               "mesh": "assets://meshes/Sponza_meshes[0]-38.mesh",
               "type": "RenderComponent"
             }
@@ -1475,7 +1439,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-39.mesh",
               "type": "RenderComponent"
             }
@@ -1503,7 +1467,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_10",
+              "material": "Sponza_Material_Dummy_10",
               "mesh": "assets://meshes/Sponza_meshes[0]-40.mesh",
               "type": "RenderComponent"
             }
@@ -1531,7 +1495,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-41.mesh",
               "type": "RenderComponent"
             }
@@ -1559,7 +1523,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_10",
+              "material": "Sponza_Material_Dummy_10",
               "mesh": "assets://meshes/Sponza_meshes[0]-42.mesh",
               "type": "RenderComponent"
             }
@@ -1587,7 +1551,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-43.mesh",
               "type": "RenderComponent"
             }
@@ -1615,7 +1579,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_9",
+              "material": "Sponza_Material_Dummy_9",
               "mesh": "assets://meshes/Sponza_meshes[0]-44.mesh",
               "type": "RenderComponent"
             }
@@ -1643,7 +1607,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-45.mesh",
               "type": "RenderComponent"
             }
@@ -1671,7 +1635,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_8",
+              "material": "Sponza_Material_Dummy_8",
               "mesh": "assets://meshes/Sponza_meshes[0]-46.mesh",
               "type": "RenderComponent"
             }
@@ -1699,7 +1663,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_7",
+              "material": "Sponza_Material_Dummy_7",
               "mesh": "assets://meshes/Sponza_meshes[0]-47.mesh",
               "type": "RenderComponent"
             }
@@ -1727,7 +1691,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_5",
+              "material": "Sponza_Material_Dummy_5",
               "mesh": "assets://meshes/Sponza_meshes[0]-48.mesh",
               "type": "RenderComponent"
             }
@@ -1755,7 +1719,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_11",
+              "material": "Sponza_Material_Dummy_11",
               "mesh": "assets://meshes/Sponza_meshes[0]-49.mesh",
               "type": "RenderComponent"
             }
@@ -1783,7 +1747,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_12",
+              "material": "Sponza_Material_Dummy_12",
               "mesh": "assets://meshes/Sponza_meshes[0]-50.mesh",
               "type": "RenderComponent"
             }
@@ -1811,7 +1775,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-51.mesh",
               "type": "RenderComponent"
             }
@@ -1839,7 +1803,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_13",
+              "material": "Sponza_Material_Dummy_13",
               "mesh": "assets://meshes/Sponza_meshes[0]-52.mesh",
               "type": "RenderComponent"
             }
@@ -1867,7 +1831,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_0",
+              "material": "Sponza_Material_Dummy_0",
               "mesh": "assets://meshes/Sponza_meshes[0]-53.mesh",
               "type": "RenderComponent"
             }
@@ -1895,7 +1859,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_14",
+              "material": "Sponza_Material_Dummy_14",
               "mesh": "assets://meshes/Sponza_meshes[0]-54.mesh",
               "type": "RenderComponent"
             }
@@ -1923,7 +1887,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_15",
+              "material": "Sponza_Material_Dummy_15",
               "mesh": "assets://meshes/Sponza_meshes[0]-55.mesh",
               "type": "RenderComponent"
             }
@@ -1951,7 +1915,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_16",
+              "material": "Sponza_Material_Dummy_16",
               "mesh": "assets://meshes/Sponza_meshes[0]-56.mesh",
               "type": "RenderComponent"
             }
@@ -1979,7 +1943,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_14",
+              "material": "Sponza_Material_Dummy_14",
               "mesh": "assets://meshes/Sponza_meshes[0]-57.mesh",
               "type": "RenderComponent"
             }
@@ -2007,7 +1971,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_15",
+              "material": "Sponza_Material_Dummy_15",
               "mesh": "assets://meshes/Sponza_meshes[0]-58.mesh",
               "type": "RenderComponent"
             }
@@ -2035,7 +1999,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_14",
+              "material": "Sponza_Material_Dummy_14",
               "mesh": "assets://meshes/Sponza_meshes[0]-59.mesh",
               "type": "RenderComponent"
             }
@@ -2063,7 +2027,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_16",
+              "material": "Sponza_Material_Dummy_16",
               "mesh": "assets://meshes/Sponza_meshes[0]-60.mesh",
               "type": "RenderComponent"
             }
@@ -2091,7 +2055,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_15",
+              "material": "Sponza_Material_Dummy_15",
               "mesh": "assets://meshes/Sponza_meshes[0]-61.mesh",
               "type": "RenderComponent"
             }
@@ -2119,7 +2083,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_13",
+              "material": "Sponza_Material_Dummy_13",
               "mesh": "assets://meshes/Sponza_meshes[0]-62.mesh",
               "type": "RenderComponent"
             }
@@ -2147,7 +2111,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_17",
+              "material": "Sponza_Material_Dummy_17",
               "mesh": "assets://meshes/Sponza_meshes[0]-63.mesh",
               "type": "RenderComponent"
             }
@@ -2175,7 +2139,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_18",
+              "material": "Sponza_Material_Dummy_18",
               "mesh": "assets://meshes/Sponza_meshes[0]-64.mesh",
               "type": "RenderComponent"
             }
@@ -2203,7 +2167,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_19",
+              "material": "Sponza_Material_Dummy_19",
               "mesh": "assets://meshes/Sponza_meshes[0]-65.mesh",
               "type": "RenderComponent"
             }
@@ -2231,7 +2195,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_18",
+              "material": "Sponza_Material_Dummy_18",
               "mesh": "assets://meshes/Sponza_meshes[0]-66.mesh",
               "type": "RenderComponent"
             }
@@ -2259,7 +2223,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_19",
+              "material": "Sponza_Material_Dummy_19",
               "mesh": "assets://meshes/Sponza_meshes[0]-67.mesh",
               "type": "RenderComponent"
             }
@@ -2287,7 +2251,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_18",
+              "material": "Sponza_Material_Dummy_18",
               "mesh": "assets://meshes/Sponza_meshes[0]-68.mesh",
               "type": "RenderComponent"
             }
@@ -2315,7 +2279,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_17",
+              "material": "Sponza_Material_Dummy_17",
               "mesh": "assets://meshes/Sponza_meshes[0]-69.mesh",
               "type": "RenderComponent"
             }
@@ -2343,7 +2307,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_19",
+              "material": "Sponza_Material_Dummy_19",
               "mesh": "assets://meshes/Sponza_meshes[0]-70.mesh",
               "type": "RenderComponent"
             }
@@ -2371,7 +2335,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_18",
+              "material": "Sponza_Material_Dummy_18",
               "mesh": "assets://meshes/Sponza_meshes[0]-71.mesh",
               "type": "RenderComponent"
             }
@@ -2399,7 +2363,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_17",
+              "material": "Sponza_Material_Dummy_17",
               "mesh": "assets://meshes/Sponza_meshes[0]-72.mesh",
               "type": "RenderComponent"
             }
@@ -2427,7 +2391,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_20",
+              "material": "Sponza_Material_Dummy_20",
               "mesh": "assets://meshes/Sponza_meshes[0]-73.mesh",
               "type": "RenderComponent"
             }
@@ -2455,7 +2419,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_21",
+              "material": "Sponza_Material_Dummy_21",
               "mesh": "assets://meshes/Sponza_meshes[0]-74.mesh",
               "type": "RenderComponent"
             }
@@ -2483,7 +2447,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_20",
+              "material": "Sponza_Material_Dummy_20",
               "mesh": "assets://meshes/Sponza_meshes[0]-75.mesh",
               "type": "RenderComponent"
             }
@@ -2511,7 +2475,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_21",
+              "material": "Sponza_Material_Dummy_21",
               "mesh": "assets://meshes/Sponza_meshes[0]-76.mesh",
               "type": "RenderComponent"
             }
@@ -2539,7 +2503,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_20",
+              "material": "Sponza_Material_Dummy_20",
               "mesh": "assets://meshes/Sponza_meshes[0]-77.mesh",
               "type": "RenderComponent"
             }
@@ -2567,7 +2531,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_21",
+              "material": "Sponza_Material_Dummy_21",
               "mesh": "assets://meshes/Sponza_meshes[0]-78.mesh",
               "type": "RenderComponent"
             }
@@ -2595,7 +2559,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_20",
+              "material": "Sponza_Material_Dummy_20",
               "mesh": "assets://meshes/Sponza_meshes[0]-79.mesh",
               "type": "RenderComponent"
             }
@@ -2623,7 +2587,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_21",
+              "material": "Sponza_Material_Dummy_21",
               "mesh": "assets://meshes/Sponza_meshes[0]-80.mesh",
               "type": "RenderComponent"
             }
@@ -2651,7 +2615,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-81.mesh",
               "type": "RenderComponent"
             }
@@ -2679,7 +2643,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-82.mesh",
               "type": "RenderComponent"
             }
@@ -2707,7 +2671,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-83.mesh",
               "type": "RenderComponent"
             }
@@ -2735,7 +2699,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-84.mesh",
               "type": "RenderComponent"
             }
@@ -2763,7 +2727,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-85.mesh",
               "type": "RenderComponent"
             }
@@ -2791,7 +2755,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-86.mesh",
               "type": "RenderComponent"
             }
@@ -2819,7 +2783,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-87.mesh",
               "type": "RenderComponent"
             }
@@ -2847,7 +2811,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-88.mesh",
               "type": "RenderComponent"
             }
@@ -2875,7 +2839,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-89.mesh",
               "type": "RenderComponent"
             }
@@ -2903,7 +2867,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-90.mesh",
               "type": "RenderComponent"
             }
@@ -2931,7 +2895,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-91.mesh",
               "type": "RenderComponent"
             }
@@ -2959,7 +2923,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-92.mesh",
               "type": "RenderComponent"
             }
@@ -2987,7 +2951,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_1",
+              "material": "Sponza_Material_Dummy_1",
               "mesh": "assets://meshes/Sponza_meshes[0]-93.mesh",
               "type": "RenderComponent"
             }
@@ -3015,7 +2979,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_2",
+              "material": "Sponza_Material_Dummy_2",
               "mesh": "assets://meshes/Sponza_meshes[0]-94.mesh",
               "type": "RenderComponent"
             }
@@ -3043,7 +3007,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_22",
+              "material": "Sponza_Material_Dummy_22",
               "mesh": "assets://meshes/Sponza_meshes[0]-95.mesh",
               "type": "RenderComponent"
             }
@@ -3071,7 +3035,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_23",
+              "material": "Sponza_Material_Dummy_23",
               "mesh": "assets://meshes/Sponza_meshes[0]-96.mesh",
               "type": "RenderComponent"
             }
@@ -3099,7 +3063,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_3",
+              "material": "Sponza_Material_Dummy_3",
               "mesh": "assets://meshes/Sponza_meshes[0]-97.mesh",
               "type": "RenderComponent"
             }
@@ -3127,7 +3091,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_23",
+              "material": "Sponza_Material_Dummy_23",
               "mesh": "assets://meshes/Sponza_meshes[0]-98.mesh",
               "type": "RenderComponent"
             }
@@ -3155,7 +3119,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_3",
+              "material": "Sponza_Material_Dummy_3",
               "mesh": "assets://meshes/Sponza_meshes[0]-99.mesh",
               "type": "RenderComponent"
             }
@@ -3183,7 +3147,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-100.mesh",
               "type": "RenderComponent"
             }
@@ -3211,7 +3175,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_24",
+              "material": "Sponza_Material_Dummy_24",
               "mesh": "assets://meshes/Sponza_meshes[0]-101.mesh",
               "type": "RenderComponent"
             }
@@ -3239,7 +3203,7 @@
               "type": "TransformComponent"
             },
             {
-              "material": "_Material_Dummy_4",
+              "material": "Sponza_Material_Dummy_4",
               "mesh": "assets://meshes/Sponza_meshes[0]-102.mesh",
               "type": "RenderComponent"
             }
@@ -3267,7 +3231,7 @@
           "type": "TransformComponent"
         },
         {
-          "material": "_Material_Dummy_0",
+          "material": "Sponza_Material_Dummy_0",
           "mesh": "assets://meshes/Sponza_meshes[0]-0.mesh",
           "type": "RenderComponent"
         }

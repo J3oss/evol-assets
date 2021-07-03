@@ -3,17 +3,8 @@
   "materials": [
     {
       "albedoTexture": "assets://textures/CesiumMilkTruck.tx",
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "id": "wheels",
       "metallicFactor": 0,
       "pipeline": "DefaultPipeline",
@@ -21,68 +12,32 @@
     },
     {
       "albedoTexture": "assets://textures/CesiumMilkTruck.tx",
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "id": "truck",
       "metallicFactor": 0,
       "pipeline": "DefaultPipeline",
       "roughnessFactor": 1
     },
     {
-      "baseColor": [
-        0,
-        0.04050629958510399,
-        0.021240700036287308,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 0, 0.04050629958510399, 0.021240700036287308, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "id": "glass",
       "metallicFactor": 0,
       "pipeline": "DefaultPipeline",
       "roughnessFactor": 1
     },
     {
-      "baseColor": [
-        0.06400000303983688,
-        0.06400000303983688,
-        0.06400000303983688,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 0.06400000303983688, 0.06400000303983688, 0.06400000303983688, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "id": "window_trim",
       "metallicFactor": 0,
       "pipeline": "DefaultPipeline",
       "roughnessFactor": 1
     },
     {
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "id": "Scene_Material_Dummy_4",
       "metallicFactor": 1,
       "pipeline": "DefaultPipeline",

@@ -3,17 +3,8 @@
   "materials": [
     {
       "albedoTexture": "assets://textures/Default_albedo.tx",
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "emissiveTexture": "assets://textures/Default_emissive.tx",
       "id": "Material_MR",
       "metallicFactor": 1,
@@ -23,17 +14,8 @@
       "roughnessFactor": 1
     },
     {
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "id": "Scene_Material_Dummy_1",
       "metallicFactor": 1,
       "pipeline": "DefaultPipeline",

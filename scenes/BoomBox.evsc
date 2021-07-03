@@ -3,17 +3,8 @@
   "materials": [
     {
       "albedoTexture": "assets://textures/BoomBox_baseColor.tx",
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
       "emissiveTexture": "assets://textures/BoomBox_emissive.tx",
       "id": "BoomBox_Mat",
       "metallicFactor": 1,
@@ -23,18 +14,9 @@
       "roughnessFactor": 1
     },
     {
-      "baseColor": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "emissiveFactor": [
-        1,
-        1,
-        1
-      ],
-      "id": "_Material_Dummy_1",
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
+      "id": "Boombox_Material_Dummy_1",
       "metallicFactor": 1,
       "pipeline": "DefaultPipeline",
       "roughnessFactor": 1

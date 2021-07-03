@@ -1,9 +1,10 @@
 #version 450
 #extension GL_EXT_nonuniform_qualifier : require
 
-#include <shaders://_builtins/types.glsl>
-#include <shaders://_builtins/constants.glsl>
-#include <shaders://_builtins/srgb_ops.glsl>
+#include "shaders://_builtins/types.glsl"
+#include "shaders://_builtins/constants.glsl"
+#include "shaders://_builtins/srgb_ops.glsl"
+#include "shaders://_builtins/PBR.glsl"
 
 struct Light {
   vec3 color;
@@ -46,67 +47,41 @@ layout(location = 4) smooth in mat3 TBN;
 
 layout(location = 0) out vec4 outColor;
 
-float DistributionGGX(vec3 N, vec3 H, float a)
+vec4 GetAlbedo(Material material, vec2 uv)
 {
-  float a2 = a*a;
-  float NdotH = max(dot(N,H),0.0);
-  float NdotH2 = NdotH*NdotH;
-
-  float num = a2;
-  float denom = (NdotH2 * (a2 - 1.0) + 1.0);
-  denom = PI * denom * denom;
-
-  return num/denom;
+  vec4 albedo;
+  if(material.albedoTexture == 0) {
+    albedo = material.baseColor;
+  } else {
+    albedo = texture(texSampler[material.albedoTexture], uv);
+  }
+  return albedo;
 }
 
-float GeometrySchlickGGX(float NdotV, float k)
+vec3 GetNormal(Material material, vec2 uv, mat3 TBN)
 {
-    float nom   = NdotV;
-    float denom = NdotV * (1.0 - k) + k;
-
-    return nom / denom;
-}
-  
-float GeometrySmith(vec3 N, vec3 V, vec3 L, float k)
-{
-    float NdotV = max(dot(N, V), 0.0);
-    float NdotL = max(dot(N, L), 0.0);
-    float ggx1 = GeometrySchlickGGX(NdotV, k);
-    float ggx2 = GeometrySchlickGGX(NdotL, k);
-
-    return ggx1 * ggx2;
-}
-
-vec3 fresnelSchlick(float cosTheta, vec3 F0)
-{
-    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+  vec3 normal;
+  if(material.normalTexture == 0) {
+    normal = TBN[2].xyz;
+  } else {
+    vec3 sampled_normal = LinearToSRGB(texture(texSampler[material.normalTexture], uv)).rgb;
+    sampled_normal = 2.0 * sampled_normal - vec3(1.0);
+    normal = normalize(TBN * sampled_normal);
+  }
+  return normal;
 }
 
 void main() 
 {
   Material material  = MaterialBuffers.materials[ PushConstants.materialBufferIndex ];
 
-  vec3 albedo;
-  float alpha;
-  if(material.albedoTexture == 0) {
-    albedo = material.baseColor.xyz;
-  } else {
-    vec4 sampledColor = texture(texSampler[material.albedoTexture], uv);
-    if(sampledColor.a < 0.5) {
-      discard;
-    }
-    albedo = sampledColor.rgb;
-    alpha = sampledColor.a;
+  vec4 albedo4 = GetAlbedo(material, uv);
+  if(albedo4.a < 0.5) {
+    // discard;
   }
+  vec3 albedo = albedo4.rgb;
 
-  vec3 out_normal;
-  if(material.normalTexture == 0) {
-    out_normal = TBN[2].xyz;
-  } else {
-    vec3 sampled_normal = LinearToSRGB(texture(texSampler[material.normalTexture], uv)).rgb;
-    sampled_normal = 2.0 * sampled_normal - vec3(1.0);
-    out_normal = normalize(TBN * sampled_normal);
-  }
+  vec3 N = GetNormal(material, uv, TBN);
 
   float metallicFactor;
   float roughnessFactor;
@@ -134,7 +109,6 @@ void main()
   vec3 V = normalize(cameraPos - position);
   vec3 L = normalize(pointLightPos - position);
   vec3 H = normalize(V + L);
-  vec3 N = out_normal;
   float distance    = length(pointLightPos - position);
   float attenuation = 1.0 / (distance * distance);
   vec3 radiance     = pointLightColor * attenuation * lightIntensity;
@@ -163,5 +137,5 @@ void main()
   color += emissiveness;
   color = color / (color + vec3(1.0));
 
-  outColor = vec4(color, alpha);
+  outColor = vec4(color, 1.0);
 }

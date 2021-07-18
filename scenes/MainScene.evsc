@@ -272,6 +272,19 @@
           "shaderPath": "shaders://default.frag"
         }
       ]
+    },
+    {
+      "id": "DefferedPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://mrt.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://mrt.frag"
+        }
+      ]
     }
   ],
   "activeCamera": "Camera.RotationHelper"

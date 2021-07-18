@@ -7,7 +7,7 @@
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "wheels",
       "metallicFactor": 0,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -16,7 +16,7 @@
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "truck",
       "metallicFactor": 0,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -24,7 +24,7 @@
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "glass",
       "metallicFactor": 0,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -32,7 +32,7 @@
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "window_trim",
       "metallicFactor": 0,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -40,7 +40,7 @@
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "Scene_Material_Dummy_4",
       "metallicFactor": 1,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     }
   ],

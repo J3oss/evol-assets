@@ -13,7 +13,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/11872827283454512094.tx",
       "normalTexture": "assets://textures/8773302468495022225.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -28,7 +28,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/715093869573992647.tx",
       "normalTexture": "assets://textures/12501374198249454378.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -43,7 +43,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8503262930880235456.tx",
       "normalTexture": "assets://textures/4477655471536070370.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -58,7 +58,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/16885566240357350108.tx",
       "normalTexture": "assets://textures/13982482287905699490.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -73,7 +73,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/11968150294050148237.tx",
       "normalTexture": "assets://textures/16299174074766089871.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -88,7 +88,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/4871783166746854860.tx",
       "normalTexture": "assets://textures/2051777328469649772.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -103,7 +103,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/9916269861720640319.tx",
       "normalTexture": "assets://textures/10388182081421875623.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -118,7 +118,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8051790464816141987.tx",
       "normalTexture": "assets://textures/15722799267630235092.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -133,7 +133,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/13824894030729245199.tx",
       "normalTexture": "assets://textures/14267839433702832875.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -148,7 +148,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8114461559286000061.tx",
       "normalTexture": "assets://textures/6667038893015345571.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -163,7 +163,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/3455394979645218238.tx",
       "normalTexture": "assets://textures/3628158980083700836.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -178,7 +178,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8783994986360286082.tx",
       "normalTexture": "assets://textures/7645212358685992005.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -191,7 +191,7 @@
       ],
       "id": "Sponza_Material_Dummy_12",
       "metallicFactor": 0,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -206,7 +206,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/3371964815757888145.tx",
       "normalTexture": "assets://textures/2299742237651021498.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -221,7 +221,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/7815564343179553343.tx",
       "normalTexture": "assets://textures/7056944414013900257.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -236,7 +236,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/7815564343179553343.tx",
       "normalTexture": "assets://textures/2374361008830720677.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -251,7 +251,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/7815564343179553343.tx",
       "normalTexture": "assets://textures/332936164838540657.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -266,7 +266,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/466164707995436622.tx",
       "normalTexture": "assets://textures/6593109234861095314.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -281,7 +281,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/466164707995436622.tx",
       "normalTexture": "assets://textures/4601176305987539675.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -296,7 +296,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/466164707995436622.tx",
       "normalTexture": "assets://textures/4910669866631290573.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -311,7 +311,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/1219024358953944284.tx",
       "normalTexture": "assets://textures/14170708867020035030.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -326,7 +326,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/2411100444841994089.tx",
       "normalTexture": "assets://textures/3827035219084910048.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -341,7 +341,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/17556969131407844942.tx",
       "normalTexture": "assets://textures/10381718147657362067.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -356,7 +356,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/13196865903111448057.tx",
       "normalTexture": "assets://textures/759203620573749278.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -371,7 +371,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/8747919177698443163.tx",
       "normalTexture": "assets://textures/14118779221266351425.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -383,7 +383,7 @@
       ],
       "id": "Sponza_Material_Dummy_25",
       "metallicFactor": 1,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     }
   ],
@@ -3239,11 +3239,95 @@
       "id": "nodes[0]"
     },
     {
+      "components": [
+        {
+          "position": [
+            0,
+            2,
+            11
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 200,
+          "type": "LightComponent"
+        }
+      ],
+      "id": "light0"
+    },
+    {
+      "components": [
+        {
+          "position": [
+            5,
+            5,
+            5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 2,
+          "type": "LightComponent"
+        }
+      ],
+      "id": "light1"
+    },
+    {
+      "components": [
+        {
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [0.0, 0.4, 0.4, 1.0],
+          "intensity": 2,
+          "type": "LightComponent"
+        }
+      ],
+      "id": "light2"
+    },
+    {
       "id": "Camera",
       "components": [
         {
           "type": "TransformComponent",
-          "position": [0.0, -2.0, 11.0],
+          "position": [0.0, 5.0, 0.0],
           "rotation": [0.0, 0.0, 0.0],
           "scale": [1.0, 1.0, 1.0]
         },
@@ -3251,6 +3335,11 @@
           "type": "ScriptComponent",
           "script_name": "MainCameraController",
           "script_path": "scripts://MainScene/Camera.lua"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 2,
+          "type": "LightComponent"
         }
       ],
       "children": [

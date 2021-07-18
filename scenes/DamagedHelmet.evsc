@@ -10,7 +10,7 @@
       "metallicFactor": 1,
       "metallicRoughnessTexture": "assets://textures/Default_AO-Default_metalRoughness.tx",
       "normalTexture": "assets://textures/Default_normal.tx",
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     },
     {
@@ -18,7 +18,7 @@
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "Scene_Material_Dummy_1",
       "metallicFactor": 1,
-      "pipeline": "DefaultPipeline",
+      "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
     }
   ],
@@ -59,6 +59,11 @@
           "position": [0.0, -2.0, 11.0],
           "rotation": [0.0, 0.0, 0.0],
           "scale": [1.0, 1.0, 1.0]
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 100,
+          "type": "LightComponent"
         },
         {
           "type": "ScriptComponent",

@@ -1,6 +1,10 @@
 #version 450
 #extension GL_EXT_nonuniform_qualifier : require
 
+#include "shaders://_builtins/constants.glsl"
+#include "shaders://_builtins/srgb_ops.glsl"
+#include "shaders://_builtins/PBR.glsl"
+
 struct Material {
   vec4 baseColor;
   uint albedoTexture;
@@ -52,6 +56,7 @@ layout(location = 4) in vec4 outpos;
 layout (location = 0) out vec4 gPosition;
 layout (location = 1) out vec3 gNormal;
 layout (location = 2) out vec3 gAlbedo;
+layout (location = 3) out vec3 gSpecular;
 
 float near = 0.001;
 float far  = 50.0;
@@ -65,32 +70,37 @@ float LinearizeDepth(float depth)
 void main() {
   Material material  = MaterialBuffers.materials[ PushConstants.materialBufferIndex ];
 
-  vec3 out_normal;
+  vec3 outNormal;
   if(material.normalTexture == 0) {
-    out_normal = TBN[2].xyz;
+    outNormal = TBN[2].xyz;
   } else {
-    vec3 sampled_normal = texture(texSampler[material.normalTexture], uv).rgb;
+    vec3 sampled_normal = LinearToSRGB(texture(texSampler[material.normalTexture], uv)).rgb;
     sampled_normal = 2.0 * sampled_normal - vec3(1.0);
-    out_normal = normalize(TBN * sampled_normal);
+    outNormal = normalize(TBN * sampled_normal);
   }
 
+  //float intensity = dot(outNormal, normalize(directional_light)) + 0.2;
 
-  float intensity = dot(out_normal, normalize(directional_light)) + 0.2;
-
-  vec3 inColor;
+  vec3 outColor;
   if(material.albedoTexture == 0) {
-    inColor = material.baseColor.xyz;
+    outColor = material.baseColor.xyz;
   } else {
-    inColor = texture(texSampler[material.albedoTexture], uv).xyz;
+    outColor = texture(texSampler[material.albedoTexture], uv).xyz;
+  }
+
+  vec3 outSpecular;
+  if(material.metallicRoughnessTexture == 0) {
+    outSpecular.b = material.metallicFactor;
+    outSpecular.g = material.roughnessFactor;
+    outSpecular.r = 1;
+  } else {
+    outSpecular = LinearToSRGB(texture(texSampler[material.metallicRoughnessTexture], uv)).xyz;
   }
 
   float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far for demonstration
 
   gPosition = outpos;
-  gNormal = out_normal;
-  gAlbedo = inColor;
-  // outColor = vec4(vec3(outpos.z) * 0.5 + 0.5 , 1.0);
-  // outColor = vec4(inColor, 1.0);
-  // outColor = vec4(vec3(intensity), 1.0);
-  // outColor = vec4(out_normal, 1.0);
+  gNormal = outNormal;
+  gAlbedo = outColor;
+  gSpecular = outSpecular;
 }

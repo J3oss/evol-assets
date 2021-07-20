@@ -32,8 +32,8 @@
             0
           ],
           "rotation": [
-            -179.999991348578,
-            -0,
+            -180,
+            180,
             0
           ],
           "scale": [
@@ -44,12 +44,77 @@
           "type": "TransformComponent"
         },
         {
+          "type": "ScriptComponent",
+          "script_name": "RotationHelper",
+          "script_path": "scripts://MainScene/objectRotation.lua"
+        },
+        {
           "material": "Material_MR",
           "mesh": "assets://meshes/DamagedHelmet_mesh_helmet_LP_13930damagedHelmet.mesh",
           "type": "RenderComponent"
         }
       ],
       "id": "node_damagedHelmet_-6514"
+    },
+    {
+    "components": [
+        {
+          "position": [  -2, 1, 2],
+          "rotation": [-180, 0, 0],
+          "scale": [ 1, 1, 1],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 200,
+          "type": "LightComponent"
+        },
+      ]
+    },
+    {
+    "components": [
+        {
+          "position": [  2, 1, 2],
+          "rotation": [-180, 0, 0],
+          "scale": [ 1, 1, 1],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 200,
+          "type": "LightComponent"
+        },
+      ]
+    },
+    {
+    "components": [
+        {
+          "position": [  2, 1, -2],
+          "rotation": [-180, 0, 0],
+          "scale": [ 1, 1, 1],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 200,
+          "type": "LightComponent"
+        },
+      ]
+    },
+    {
+    "components": [
+        {
+          "position": [  -2, 1, -2],
+          "rotation": [-180, 0, 0],
+          "scale": [ 1, 1, 1],
+          "type": "TransformComponent"
+        },
+        {
+          "color": [1.0, 1.0, 1.0, 1.0],
+          "intensity": 200,
+          "type": "LightComponent"
+        },
+      ]
     },
     {
       "id": "Camera",
@@ -59,11 +124,6 @@
           "position": [0.0, -2.0, 11.0],
           "rotation": [0.0, 0.0, 0.0],
           "scale": [1.0, 1.0, 1.0]
-        },
-        {
-          "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 100,
-          "type": "LightComponent"
         },
         {
           "type": "ScriptComponent",

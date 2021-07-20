@@ -43,6 +43,8 @@ layout(set = 0, binding = 1) uniform LightBuffer {
   layout(align = 16) Light lights[];
 } LightsBuffers;
 
+layout (set = 0, binding = 2) uniform samplerCube skybox;
+
 layout(set = 2, binding = 3) buffer MaterialBuffer {
   layout(align = 16) Material materials[];
 } MaterialBuffers;
@@ -52,11 +54,12 @@ layout(set = 2, binding = 4) uniform sampler2D texSampler[];
 layout(location = 0) in vec2 uv;
 layout(location = 1) smooth in mat3 TBN;
 layout(location = 4) in vec4 outpos;
+layout(location = 5) in vec3 cameraPos;
 
 layout (location = 0) out vec4 gPosition;
-layout (location = 1) out vec3 gNormal;
-layout (location = 2) out vec3 gAlbedo;
-layout (location = 3) out vec3 gSpecular;
+layout (location = 1) out vec4 gNormal;
+layout (location = 2) out vec4 gAlbedo;
+layout (location = 3) out vec4 gSpecular;
 
 float near = 0.001;
 float far  = 50.0;
@@ -95,12 +98,19 @@ void main() {
     outSpecular.r = 1;
   } else {
     outSpecular = LinearToSRGB(texture(texSampler[material.metallicRoughnessTexture], uv)).xyz;
+
+    gNormal.w = outSpecular.x;
+    gAlbedo.w = outSpecular.y;
+    gSpecular.w = outSpecular.z;
   }
 
-  float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far for demonstration
+  vec3 I = normalize(outpos.xyz - cameraPos);
+  vec3 R = reflect(I, normalize(outNormal));
+  //R = R * -1;
+  outSpecular = texture(skybox, R).rgb;
 
   gPosition = outpos;
-  gNormal = outNormal;
-  gAlbedo = outColor;
-  gSpecular = outSpecular;
+  gNormal.xyz = outNormal;
+  gAlbedo.xyz = outColor;
+  gSpecular.xyz = outSpecular;
 }

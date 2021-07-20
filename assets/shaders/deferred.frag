@@ -32,16 +32,25 @@ layout(location = 0) out vec4 outColor;
 
 void main()
 {
-  vec3 position = texture(positionTexture, inUV).rgb;
-  vec3 normal = texture(normalTexture, inUV).rgb;
-  vec3 albedo = texture(albedoTexture, inUV).rgb;
+  vec4 gposition = texture(positionTexture, inUV);
+  vec4 gnormal = texture(normalTexture, inUV);
+  vec4 galbedo = texture(albedoTexture, inUV);
+  vec4 gspec = texture(specularTexture, inUV);
 
-  vec3 spec = texture(specularTexture, inUV).rgb;
-  float metallicFactor = spec.b;
-  float roughnessFactor = spec.g;
-  float ao = spec.r;
+  vec3 position = gposition.xyz;
+  vec3 normal = gnormal.xyz;
+  vec3 albedo = galbedo.xyz;
+  vec3 spec = gspec.xyz;
+
+  float metallicFactor = gspec.w;
+  float roughnessFactor = galbedo.w;
+  float ao = gnormal.w;
 
   vec3 V = normalize(cameraPos - position);
+
+  vec3 F0 = vec3(0.04);
+  F0      = mix(F0, albedo, metallicFactor);
+  float reflectance = max(max(F0.x,F0.y),F0.z);
 
   vec3 Lo = vec3(0);
   for(int i = 0; i < PushConstants.lightCount; ++i)
@@ -53,9 +62,6 @@ void main()
     float distance    = length(l.tranform[3].xyz - position);
     float attenuation = 1.0 / (distance * distance);
     vec3 radiance     = l.color.xyz * attenuation * l.intensity;
-
-    vec3 F0 = vec3(0.04);
-    F0      = mix(F0, albedo, metallicFactor);
 
     vec3 F  = fresnelSchlick(max(dot(H, V), 0.0), F0);
     float NDF = DistributionGGX(normal, H, roughnessFactor);
@@ -70,14 +76,18 @@ void main()
     kD *= 1.0 - metallicFactor;
 
     float NdotL = max(dot(normal, L), 0.0);
-    Lo += (kD * albedo / PI + specular) * radiance * NdotL;
+    Lo += clamp((kD * albedo / PI + specular) * radiance * NdotL, vec3(0), vec3(1));
   }
 
-  vec3 ambient = vec3(0.2) * albedo * ao;
+  vec3 ambient = vec3(0.2) * albedo;
 
-  vec3 color   = ambient + Lo;
-  // color += vec3();
-  color = color / (color + vec3(1.0));
+  vec3 color   =  ambient + Lo;
 
+  //color = color + spec * reflectance;
+  color = mix(color, spec, reflectance);
+
+  //color = color / (color + vec3(1.0));
+
+  //outColor = vec4(color, 1.0);
   outColor = vec4(color, 1.0);
 }

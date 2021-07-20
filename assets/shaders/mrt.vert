@@ -64,6 +64,7 @@ layout(location = 0) out vec2 uv;
 layout(location = 1) smooth out mat3 TBN;
 
 layout(location = 4) out vec4 outpos;
+layout(location = 5) out vec3 cameraPos;
 
 void main()
 {
@@ -83,4 +84,6 @@ void main()
 
   gl_Position = Camera.projection * Camera.view * PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0);
   outpos = PushConstants.render_matrix * vec4(vertex.position.xyz, 1.0);
+
+  cameraPos = inverse(Camera.view)[3].xyz;
 }

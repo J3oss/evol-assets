@@ -43,7 +43,11 @@
     {
       "id": "CesiumMilkTruck",
       "path": "scenes://CesiumMilkTruck.evsc"
+    },
+    {
+      "id": "Car",
+      "path": "scenes://Car.evsc"
     }
   ],
-  "activeScene": "DamagedHelmetScene"
+  "activeScene": "Car"
 }

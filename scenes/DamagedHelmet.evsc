@@ -34,21 +34,9 @@
     {
       "components": [
         {
-          "position": [
-            0,
-            0,
-            0
-          ],
-          "rotation": [
-            -180,
-            180,
-            0
-          ],
-          "scale": [
-            1,
-            1,
-            1
-          ],
+          "position": [ 0, 0, 0 ],
+          "rotation": [ -180, 0, 0 ],
+          "scale": [ 1, 1, 1 ],
           "type": "TransformComponent"
         },
         {
@@ -99,9 +87,9 @@
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 200,
+          "intensity": 20,
           "type": "LightComponent"
-        },
+        }
       ]
     },
     {
@@ -119,9 +107,9 @@
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 200,
+          "intensity": 20,
           "type": "LightComponent"
-        },
+        }
       ]
     },
     {
@@ -139,9 +127,9 @@
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 200,
+          "intensity": 20,
           "type": "LightComponent"
-        },
+        }
       ]
     },
     {

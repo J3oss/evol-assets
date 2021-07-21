@@ -49,5 +49,5 @@
       "path": "scenes://Car.evsc"
     }
   ],
-  "activeScene": "Car"
+  "activeScene": "DamagedHelmetScene"
 }

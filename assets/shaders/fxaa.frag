@@ -63,7 +63,4 @@ void main()
     outColor = vec4(rgbA, 1.0);
   else
     outColor = vec4(rgbB, 1.0);
-
-  if(uv.x < 0.5)
-    outColor = vec4(rgbM, 1.0);
 }

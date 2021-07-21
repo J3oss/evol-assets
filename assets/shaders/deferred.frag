@@ -81,15 +81,12 @@ void main()
 
   vec3 ambient = vec3(0.2) * albedo;
 
-  vec3 color   =  ambient + Lo;
+  vec3 color =  ambient + Lo;
 
   color += spec * specFactor;
-  // color = mix(color, spec, specFactor);
 
-  //color = color / (color + vec3(1.0));
-  // float reflectance = max(max(F.x, F.y), F.z);
-  // float reflectance = max(max(F0.x, F0.y), F0.z);
+  // color = color / (color + vec3(1.0));
 
   outColor = vec4(color, 1.0);
-  // outColor = vec4(vec3(reflectance), 1.0);
+  // outColor = vec4(spec * specFactor, 1.0);
 }

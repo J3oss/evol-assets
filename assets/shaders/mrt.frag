@@ -4,17 +4,7 @@
 #include "shaders://_builtins/constants.glsl"
 #include "shaders://_builtins/srgb_ops.glsl"
 #include "shaders://_builtins/PBR.glsl"
-
-struct Material {
-  vec4 baseColor;
-  uint albedoTexture;
-
-  uint normalTexture;
-
-  float metallicFactor;
-  float roughnessFactor;
-  uint metallicRoughnessTexture;
-};
+#include "shaders://_builtins/types.glsl"
 
 struct Light {
   vec3 color;
@@ -86,30 +76,34 @@ void main() {
   if(material.metallicRoughnessTexture == 0) {
     outSpecular.b = material.metallicFactor;
     outSpecular.g = material.roughnessFactor;
-    outSpecular.r = 1;
+    outSpecular.r = 1.0;
   } else {
     outSpecular = LinearToSRGB(texture(texSampler[material.metallicRoughnessTexture], uv)).xyz;
-
-    float metallicFactor = outSpecular.z;
-    float roughnessFactor = outSpecular.y;
-    // vec3 F0 = mix(vec3(0.04), outColor, (metallicFactor - roughnessFactor));
-    // float reflectance = max(max(F0.x, F0.y), F0.z);
-    // float reflectance = (metallicFactor + roughnessFactor) * 0.5;
-    float reflectance = 1.0 - roughnessFactor;
-
-    gNormal.w = outSpecular.x;
-    gAlbedo.w = roughnessFactor;
-    gPosition.w = metallicFactor;
-    gSpecular.w = reflectance;
   }
+
+  float metallicFactor = outSpecular.z;
+  float roughnessFactor = outSpecular.y;
+  float ao = outSpecular.x;
+
+  gNormal.w = ao;
+  gAlbedo.w = roughnessFactor;
+  gPosition.w = metallicFactor;
+
+  float reflectance = 1.0 - roughnessFactor;
+  gSpecular.w = reflectance;
 
   vec3 I = normalize(outpos.xyz - cameraPos);
   vec3 R = reflect(I, normalize(outNormal));
   //R = R * -1;
   outSpecular = texture(skybox, R).rgb;
 
+  if(material.emissiveTexture != 0) {
+    gSpecular.w = 1.0;
+    outSpecular += texture(texSampler[material.emissiveTexture], uv).rgb * material.emissiveFactor.xyz;
+  }
 
-  gPosition = outpos;
+
+  gPosition.xyz = outpos.xyz;
   gNormal.xyz = outNormal;
   gAlbedo.xyz = outColor;
   gSpecular.xyz = outSpecular;

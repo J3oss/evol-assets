@@ -274,6 +274,19 @@
       ]
     },
     {
+      "id": "LightSpherePipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://lightObject.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://lightObject.frag"
+        }
+      ]
+    },
+    {
       "id": "DefferedPipeline",
       "shaderStages": [
         {

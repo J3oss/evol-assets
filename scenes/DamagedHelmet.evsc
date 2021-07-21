@@ -20,6 +20,14 @@
       "metallicFactor": 1,
       "pipeline": "DefferedPipeline",
       "roughnessFactor": 1
+    },
+    {
+      "baseColor":[1.0,1.0,1.0,1.0],
+      "emissiveFactor":[1.0,1.0,1.0],
+      "id":"LightMaterial",
+      "metallicFactor":1.0,
+      "pipeline":"LightSpherePipeline",
+      "roughnessFactor":1.0
     }
   ],
   "nodes": [
@@ -59,10 +67,15 @@
     {
     "components": [
         {
-          "position": [  -2, 1, 2],
-          "rotation": [-180, 0, 0],
+          "position": [  0, 1, 0],
+          "rotation": [0, 0, 0],
           "scale": [ 1, 1, 1],
           "type": "TransformComponent"
+        },
+        {
+          "material":"LightMaterial",
+          "mesh":"assets://meshes/lightSphere_Sphere.mesh",
+          "type":"RenderComponent"
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
@@ -80,6 +93,11 @@
           "type": "TransformComponent"
         },
         {
+          "material":"LightMaterial",
+          "mesh":"assets://meshes/lightSphere_Sphere.mesh",
+          "type":"RenderComponent"
+        },
+        {
           "color": [1.0, 1.0, 1.0, 1.0],
           "intensity": 200,
           "type": "LightComponent"
@@ -95,6 +113,11 @@
           "type": "TransformComponent"
         },
         {
+          "material":"LightMaterial",
+          "mesh":"assets://meshes/lightSphere_Sphere.mesh",
+          "type":"RenderComponent"
+        },
+        {
           "color": [1.0, 1.0, 1.0, 1.0],
           "intensity": 200,
           "type": "LightComponent"
@@ -108,6 +131,11 @@
           "rotation": [-180, 0, 0],
           "scale": [ 1, 1, 1],
           "type": "TransformComponent"
+        },
+        {
+          "material":"LightMaterial",
+          "mesh":"assets://meshes/lightSphere_Sphere.mesh",
+          "type":"RenderComponent"
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],

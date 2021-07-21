@@ -41,16 +41,16 @@ void main()
   vec3 normal = gnormal.xyz;
   vec3 albedo = galbedo.xyz;
   vec3 spec = gspec.xyz;
+  float specFactor = gspec.w;
 
-  float metallicFactor = gspec.w;
+  float metallicFactor = gposition.w;
   float roughnessFactor = galbedo.w;
   float ao = gnormal.w;
 
   vec3 V = normalize(cameraPos - position);
 
-  vec3 F0 = vec3(0.04);
-  F0      = mix(F0, albedo, metallicFactor);
-  float reflectance = max(max(F0.x,F0.y),F0.z);
+  vec3 F0 = mix(vec3(0.04), albedo, metallicFactor);
+  vec3 F  = fresnelSchlickRoughness(max(dot(normal, V), 0.0), F0, roughnessFactor);
 
   vec3 Lo = vec3(0);
   for(int i = 0; i < PushConstants.lightCount; ++i)
@@ -63,12 +63,12 @@ void main()
     float attenuation = 1.0 / (distance * distance);
     vec3 radiance     = l.color.xyz * attenuation * l.intensity;
 
-    vec3 F  = fresnelSchlick(max(dot(H, V), 0.0), F0);
     float NDF = DistributionGGX(normal, H, roughnessFactor);
     float G   = GeometrySmith(normal, V, L, roughnessFactor);
 
     vec3 numerator    = NDF * G * F;
     float denominator = 4.0 * max(dot(normal, V), 0.0) * max(dot(normal, L), 0.0);
+
     vec3 specular     = numerator / max(denominator, 0.001);
 
     vec3 kS = F;
@@ -83,11 +83,13 @@ void main()
 
   vec3 color   =  ambient + Lo;
 
-  //color = color + spec * reflectance;
-  color = mix(color, spec, reflectance);
+  color += spec * specFactor;
+  // color = mix(color, spec, specFactor);
 
   //color = color / (color + vec3(1.0));
+  // float reflectance = max(max(F.x, F.y), F.z);
+  // float reflectance = max(max(F0.x, F0.y), F0.z);
 
-  //outColor = vec4(color, 1.0);
   outColor = vec4(color, 1.0);
+  // outColor = vec4(vec3(reflectance), 1.0);
 }

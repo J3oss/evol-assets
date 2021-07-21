@@ -3260,7 +3260,7 @@
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 200,
+          "intensity": 10,
           "type": "LightComponent"
         }
       ],
@@ -3338,7 +3338,7 @@
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 2,
+          "intensity": 10,
           "type": "LightComponent"
         }
       ],

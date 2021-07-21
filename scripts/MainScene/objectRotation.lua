@@ -5,5 +5,5 @@ end
 this.on_update = function()
   rotationSpeed = 0.001
   this.angles.y = this.angles.y - rotationSpeed
-  this.eulerAngles = this.angles
+  -- this.eulerAngles = this.angles
 end

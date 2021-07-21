@@ -66,9 +66,9 @@
         },
         {
           "color": [1.0, 1.0, 1.0, 1.0],
-          "intensity": 200,
+          "intensity": 20,
           "type": "LightComponent"
-        },
+        }
       ]
     },
     {

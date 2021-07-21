@@ -61,15 +61,6 @@ layout (location = 1) out vec4 gNormal;
 layout (location = 2) out vec4 gAlbedo;
 layout (location = 3) out vec4 gSpecular;
 
-float near = 0.001;
-float far  = 50.0;
-
-float LinearizeDepth(float depth)
-{
-    float z = depth * 2.0 - 1.0; // back to NDC
-    return (2.0 * near * far) / (far + near - z * (far - near));
-}
-
 void main() {
   Material material  = MaterialBuffers.materials[ PushConstants.materialBufferIndex ];
 
@@ -99,15 +90,24 @@ void main() {
   } else {
     outSpecular = LinearToSRGB(texture(texSampler[material.metallicRoughnessTexture], uv)).xyz;
 
+    float metallicFactor = outSpecular.z;
+    float roughnessFactor = outSpecular.y;
+    // vec3 F0 = mix(vec3(0.04), outColor, (metallicFactor - roughnessFactor));
+    // float reflectance = max(max(F0.x, F0.y), F0.z);
+    // float reflectance = (metallicFactor + roughnessFactor) * 0.5;
+    float reflectance = 1.0 - roughnessFactor;
+
     gNormal.w = outSpecular.x;
-    gAlbedo.w = outSpecular.y;
-    gSpecular.w = outSpecular.z;
+    gAlbedo.w = roughnessFactor;
+    gPosition.w = metallicFactor;
+    gSpecular.w = reflectance;
   }
 
   vec3 I = normalize(outpos.xyz - cameraPos);
   vec3 R = reflect(I, normalize(outNormal));
   //R = R * -1;
   outSpecular = texture(skybox, R).rgb;
+
 
   gPosition = outpos;
   gNormal.xyz = outNormal;

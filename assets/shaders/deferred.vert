@@ -1,10 +1,5 @@
 #version 450
 
-layout( push_constant ) uniform constants
-{
-  uint lightCount;
-} PushConstants;
-
 layout(set = 1, binding = 0) uniform CameraParam {
   mat4 projection;
   mat4 view;

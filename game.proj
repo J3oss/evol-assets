@@ -29,25 +29,17 @@
       "path": "scenes://MainScene.evsc"
     },
     {
-      "id": "SponzaScene",
-      "path": "scenes://Sponza.evsc"
-    },
-    {
       "id": "DamagedHelmetScene",
       "path": "scenes://DamagedHelmet.evsc"
     },
     {
-      "id": "BoomBox",
-      "path": "scenes://BoomBox.evsc"
+      "id": "Sponza",
+      "path": "scenes://Sponza.evsc"
     },
     {
-      "id": "CesiumMilkTruck",
-      "path": "scenes://CesiumMilkTruck.evsc"
-    },
-    {
-      "id": "Car",
-      "path": "scenes://Car.evsc"
+      "id": "Demo0",
+      "path": "scenes://DemoScene0.evsc"
     }
   ],
-  "activeScene": "DamagedHelmetScene"
+  "activeScene": "Demo0"
 }

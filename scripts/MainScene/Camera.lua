@@ -1,5 +1,5 @@
 this.on_init = function()
-  this.speed = 0.01
+  this.speed = 0.1
   this.angles = Vec3:new()
   this.mouse_sens = 0.01
 end
@@ -31,13 +31,6 @@ this.on_update = function()
   end
   if Input.getKeyDown(Input.KeyCode.Left) then
     pos = pos - helper.right * this.speed
-  end
-
-  if Input.getMouseButtonJustPressed(0) then
-    hit = rayCast(this.worldPosition, helper.forward, 300)
-    if(hit.hasHit) then
-      hit.object.position = hit.object.position + Vec3:new(0, 0, -15)
-    end
   end
 
   this.position = pos

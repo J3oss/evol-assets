@@ -14,6 +14,26 @@
       "roughnessFactor": 1
     },
     {
+      "baseColor": [ 1, 0, 0, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
+      "id": "DotMaterial",
+      "metallicFactor": 0,
+      "pipeline": "DefferedPipeline",
+      "roughnessFactor": 1
+    },
+    {
+      "albedoTexture": "assets://textures/Default_albedo.tx",
+      "baseColor": [ 1, 1, 1, 1 ],
+      "emissiveFactor": [ 1, 1, 1 ],
+      "emissiveTexture": "assets://textures/Default_emissive.tx",
+      "id": "CustomMaterial",
+      "metallicFactor": 1,
+      "metallicRoughnessTexture": "assets://textures/Default_AO-Default_metalRoughness.tx",
+      "normalTexture": "assets://textures/Default_normal.tx",
+      "pipeline": "CustomPipeline",
+      "roughnessFactor": 1
+    },
+    {
       "baseColor": [ 1, 1, 1, 1 ],
       "emissiveFactor": [ 1, 1, 1 ],
       "id": "Scene_Material_Dummy_1",
@@ -34,15 +54,10 @@
     {
       "components": [
         {
-          "position": [ 0, 0, 0 ],
+          "position": [ -1, 0, 0 ],
           "rotation": [ -180, 0, 0 ],
           "scale": [ 1, 1, 1 ],
           "type": "TransformComponent"
-        },
-        {
-          "type": "ScriptComponent",
-          "script_name": "RotationHelper",
-          "script_path": "scripts://MainScene/objectRotation.lua"
         },
         {
           "material": "Material_MR",
@@ -51,6 +66,32 @@
         }
       ],
       "id": "node_damagedHelmet_-6514"
+    },
+    {
+      "components": [
+        {
+          "position": [ 1, 0, 0 ],
+          "rotation": [ -180, 0, 0 ],
+          "scale": [ 1, 1, 1 ],
+          "type": "TransformComponent"
+        },
+        {
+          "material": "CustomMaterial",
+          "mesh": "assets://meshes/DamagedHelmet_mesh_helmet_LP_13930damagedHelmet.mesh",
+          "type": "RenderComponent"
+        },
+        {
+          "type": "RigidbodyComponent",
+          "mass": 1,
+          "restitution": 1,
+          "rigidbodyType": "Kinematic",
+          "collisionShape": {
+            "type": "Sphere",
+            "radius": 1.0
+          }
+        }
+      ],
+      "id": "CustomDamagedHelmet"
     },
     {
     "components": [
@@ -170,7 +211,95 @@
               "script_name": "MainCameraRotationHelper",
               "script_path": "scripts://MainScene/CameraHelper.lua"
             }
+          ],
+          "children": [
+            {
+              "id": "Center",
+              "components": [
+                {
+                  "type": "TransformComponent",
+                  "position": [0,0,-0.2],
+                  "rotation": [0,0,0],
+                  "scale": [0.005,0.005,0.005]
+                },
+                {
+                  "type": "RenderComponent",
+                  "material": "DotMaterial",
+                  "mesh": "assets://meshes/lightSphere_Sphere.mesh"
+                }
+              ]
+            },
+            {
+              "id": "GravityGun",
+              "components": [
+                {
+                  "type": "TransformComponent",
+                  "position": [ 0, 0, 0 ],
+                  "rotation": [ 0, 0, 0 ],
+                  "scale": [ 1, 1, 1 ]
+                },
+                {
+                  "type": "ScriptComponent",
+                  "script_name": "GravityGunScript",
+                  "script_path": "scripts://demo/gravitygun.lua"
+                }
+              ]
+            }
           ]
+        }
+      ]
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "DefaultPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://default.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://default.frag"
+        }
+      ]
+    },
+    {
+      "id": "LightSpherePipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://lightObject.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://lightObject.frag"
+        }
+      ]
+    },
+    {
+      "id": "DefferedPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://mrt.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://mrt.frag"
+        }
+      ]
+    },
+    {
+      "id": "CustomPipeline",
+      "shaderStages": [
+        {
+          "type": "Vertex",
+          "shaderPath": "shaders://custom.vert"
+        },
+        {
+          "type": "Fragment",
+          "shaderPath": "shaders://custom.frag"
         }
       ]
     }

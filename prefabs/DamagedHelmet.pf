@@ -1,0 +1,26 @@
+{
+  "components": [
+    {
+      "position": [ 1, 0, 0 ],
+      "rotation": [ -180, 0, 0 ],
+      "scale": [ 1, 1, 1 ],
+      "type": "TransformComponent"
+    },
+    {
+      "material": "CustomMaterial",
+      "mesh": "assets://meshes/DamagedHelmet_mesh_helmet_LP_13930damagedHelmet.mesh",
+      "type": "RenderComponent"
+    },
+    {
+      "type": "RigidbodyComponent",
+      "mass": 1,
+      "restitution": 1,
+      "rigidbodyType": "Dynamic",
+      "collisionShape": {
+        "type": "Sphere",
+        "radius": 1.0
+      }
+    }
+  ],
+  "id": "DamagedHelmet"
+}

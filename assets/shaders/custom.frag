@@ -65,15 +65,14 @@ void main() {
 
   //float intensity = dot(outNormal, normalize(directional_light)) + 0.2;
 
-  vec4 outColor;
+  vec3 outColor;
   if(material.albedoTexture == 0) {
-    outColor = material.baseColor;
+    outColor = material.baseColor.xyz;
   } else {
-    outColor = texture(texSampler[material.albedoTexture], uv);
+    outColor = texture(texSampler[material.albedoTexture], uv).xyz;
   }
-  if(outColor.a < 0.5) {
-    discard;
-  }
+
+  // outColor = vec3(1.0, 0.0, 0.0);
 
   vec3 outSpecular;
   if(material.metallicRoughnessTexture == 0) {
@@ -92,8 +91,7 @@ void main() {
   gAlbedo.w = roughnessFactor;
   gPosition.w = metallicFactor;
 
-  // float reflectance = roughnessFactor * metallicFactor;
-  float reflectance = 1 - roughnessFactor;
+  float reflectance = 1.0 - roughnessFactor;
   gSpecular.w = reflectance;
 
   vec3 I = normalize(outpos.xyz - cameraPos);
@@ -109,6 +107,6 @@ void main() {
 
   gPosition.xyz = outpos.xyz;
   gNormal.xyz = outNormal;
-  gAlbedo.xyz = outColor.xyz;
+  gAlbedo.xyz = outColor;
   gSpecular.xyz = outSpecular;
 }

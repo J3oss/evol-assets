@@ -3,9 +3,20 @@ this.on_init = function()
   this.mouse_sens = 0.01
 end
 
+function clamp(min, max, val)
+  if val < min then
+    return min
+  elseif val > max then
+    return max
+  else
+    return val
+  end
+end
+
 this.on_update = function()
   local deltaMouseMovement = Input.getDeltaMousePos()
-  this.angles.x = this.angles.x - deltaMouseMovement.y * this.mouse_sens
+  this.angles.x = clamp(-1.57, 1.57, this.angles.x - deltaMouseMovement.y * this.mouse_sens)
+  print(this.angles.x)
   this.eulerAngles = this.angles
 
   if Input.getKeyJustPressed(Input.KeyCode.O) then

@@ -10,7 +10,7 @@ struct Vertex {
 };
 
 struct Light {
-  mat4 tranform;
+  mat4 transform;
   vec4 color;
   float intensity;
 };
@@ -36,19 +36,41 @@ layout(set = 1, binding = 0) uniform LightBuffer {
   layout(align = 16) Light lights[MAX_LIGHT_COUNT];
 } LightsBuffer;
 
-float near = 10;
-float far = 0.1;
+mat4 get_orthographicMatrix(float l, float r, float b, float t, float f, float n)
+{
+  mat4 M = mat4(0);
+
+    // set OpenGL perspective projection matrix
+    M[0][0] = 2 / (r - l);
+    M[0][1] = 0;
+    M[0][2] = 0;
+    M[0][3] = 0;
+
+    M[1][0] = 0;
+    M[1][1] = -2 / (t - b);
+    M[1][2] = 0;
+    M[1][3] = 0;
+
+    M[2][0] = 0;
+    M[2][1] = 0;
+    M[2][2] = -2 / (f - n);
+    M[2][3] = 0;
+
+    M[0][3] = -(r + l) / (r - l);
+    M[1][3] = -(t + b) / (t - b);
+    M[2][3] = -(f + n) / (f - n);
+    M[3][3] = 1;
+
+    return M;
+}
 
 void main()
 {
   uint index = IndexBuffers[ PushConstants.indexBufferIndex ].indices[gl_VertexIndex];
   Vertex vertex = VertexBuffers[ PushConstants.vertexBufferIndex ].vertices[ index ];
 
-  mat4 lightView = transpose(inverse( LightsBuffer.lights[0].tranform));
-  mat4 lightProjection = mat4(1.0);
-  lightProjection[3][2] = -(far+near)/(far-near);
-  lightProjection[2][2] = -2/(far-near);
-
+  mat4 lightView = inverse( LightsBuffer.lights[0].transform);
+  mat4 lightProjection = get_orthographicMatrix(-1, 1, -1, 1, 100, 0.1);
   mat4 lightSpaceMatrix = lightProjection * lightView;
 
   gl_Position = lightSpaceMatrix * PushConstants.transform * vec4(vertex.position.xyz, 1.0);
